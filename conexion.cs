@@ -12,6 +12,8 @@ namespace SeguridadVialInventario
         public conexion()
         {
             //commit Baldenebro
+            //commit Urias
+
             con = new MySqlConnection("server=127.0.0.1; port=3306; database=bd_seguridad_vial; Uid=root; pwd=12345;");
         }
         public bool Abrirconexion()
