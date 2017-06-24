@@ -46,3 +46,6 @@ C:\Users\Fernando Baldenebro\Documents\Visual Studio 2015\Projects\seguridad_via
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\SeguridadVialInventario.exe.config
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.exe
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.pdb
+C:\Users\Alex\Source\Repos\seguridad_vial2\bin\Debug\SeguridadVialInventario.exe.config
+C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.exe
+C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.pdb
