@@ -40,3 +40,9 @@ E:\SeguridadVialInventario\SeguridadVialInventario\obj\Debug\SeguridadVialInvent
 E:\SeguridadVialInventario\SeguridadVialInventario\obj\Debug\SeguridadVialInventario.ModificarCliente.resources
 E:\SeguridadVialInventario\SeguridadVialInventario\obj\Debug\SeguridadVialInventario.AgregarProveedor.resources
 E:\SeguridadVialInventario\SeguridadVialInventario\obj\Debug\SeguridadVialInventario.ModificarProveedor.resources
+C:\Users\Fernando Baldenebro\Documents\Visual Studio 2015\Projects\seguridad_vial-master\bin\Debug\SeguridadVialInventario.exe.config
+C:\Users\Fernando Baldenebro\Documents\Visual Studio 2015\Projects\seguridad_vial-master\obj\Debug\SeguridadVialInventario.exe
+C:\Users\Fernando Baldenebro\Documents\Visual Studio 2015\Projects\seguridad_vial-master\obj\Debug\SeguridadVialInventario.pdb
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\SeguridadVialInventario.exe.config
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.exe
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.pdb
