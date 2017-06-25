@@ -82,6 +82,7 @@
     <Compile Include="DAOMovimientos.cs" />
     <Compile Include="DAOProductos.cs" />
     <Compile Include="DAOProveedores.cs" />
+    <Compile Include="DAOVender.cs" />
     <Compile Include="ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
