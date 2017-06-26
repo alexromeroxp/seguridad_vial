@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_proveedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Vender = new System.Windows.Forms.Button();
+            this.btn_comprar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Calcular = new System.Windows.Forms.Button();
-            this.txt_Precio = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,14 +42,14 @@
             this.cb_Producto = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cb_proveedor
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(180, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 26);
-            this.comboBox1.TabIndex = 41;
+            this.cb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_proveedor.FormattingEnabled = true;
+            this.cb_proveedor.Location = new System.Drawing.Point(180, 67);
+            this.cb_proveedor.Name = "cb_proveedor";
+            this.cb_proveedor.Size = new System.Drawing.Size(140, 26);
+            this.cb_proveedor.TabIndex = 41;
             // 
             // label2
             // 
@@ -59,22 +57,23 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(177, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 18);
+            this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 40;
-            this.label2.Text = "Cliente:";
+            this.label2.Text = "Proveedor:";
             // 
-            // btn_Vender
+            // btn_comprar
             // 
-            this.btn_Vender.BackColor = System.Drawing.Color.Green;
-            this.btn_Vender.FlatAppearance.BorderSize = 3;
-            this.btn_Vender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Vender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Vender.Location = new System.Drawing.Point(236, 298);
-            this.btn_Vender.Name = "btn_Vender";
-            this.btn_Vender.Size = new System.Drawing.Size(99, 35);
-            this.btn_Vender.TabIndex = 39;
-            this.btn_Vender.Text = "Vender";
-            this.btn_Vender.UseVisualStyleBackColor = false;
+            this.btn_comprar.BackColor = System.Drawing.Color.Green;
+            this.btn_comprar.FlatAppearance.BorderSize = 3;
+            this.btn_comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_comprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_comprar.Location = new System.Drawing.Point(219, 198);
+            this.btn_comprar.Name = "btn_comprar";
+            this.btn_comprar.Size = new System.Drawing.Size(99, 35);
+            this.btn_comprar.TabIndex = 39;
+            this.btn_comprar.Text = "Vender";
+            this.btn_comprar.UseVisualStyleBackColor = false;
+            this.btn_comprar.Click += new System.EventHandler(this.btn_comprar_Click);
             // 
             // btn_Cancelar
             // 
@@ -82,7 +81,7 @@
             this.btn_Cancelar.FlatAppearance.BorderSize = 3;
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(129, 298);
+            this.btn_Cancelar.Location = new System.Drawing.Point(112, 198);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(99, 35);
             this.btn_Cancelar.TabIndex = 38;
@@ -108,46 +107,29 @@
             this.btn_Calcular.FlatAppearance.BorderSize = 3;
             this.btn_Calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Calcular.Location = new System.Drawing.Point(180, 153);
+            this.btn_Calcular.Location = new System.Drawing.Point(180, 117);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(140, 35);
             this.btn_Calcular.TabIndex = 36;
             this.btn_Calcular.Text = "Calcular";
             this.btn_Calcular.UseVisualStyleBackColor = false;
+            this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
             // 
-            // txt_Precio
+            // lbl_total
             // 
-            this.txt_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Precio.Location = new System.Drawing.Point(9, 123);
-            this.txt_Precio.Name = "txt_Precio";
-            this.txt_Precio.Size = new System.Drawing.Size(140, 24);
-            this.txt_Precio.TabIndex = 35;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 18);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Precio:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(234, 204);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 18);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "______";
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.Location = new System.Drawing.Point(260, 167);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(62, 18);
+            this.lbl_total.TabIndex = 33;
+            this.lbl_total.Text = "______";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(177, 204);
+            this.label5.Location = new System.Drawing.Point(203, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 32;
@@ -156,7 +138,7 @@
             // txt_Cantidad
             // 
             this.txt_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cantidad.Location = new System.Drawing.Point(180, 123);
+            this.txt_Cantidad.Location = new System.Drawing.Point(12, 128);
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(140, 24);
             this.txt_Cantidad.TabIndex = 31;
@@ -165,7 +147,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(177, 101);
+            this.label4.Location = new System.Drawing.Point(9, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 18);
             this.label4.TabIndex = 30;
@@ -194,16 +176,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 347);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(324, 238);
+            this.Controls.Add(this.cb_proveedor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_Vender);
+            this.Controls.Add(this.btn_comprar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Calcular);
-            this.Controls.Add(this.txt_Precio);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_Cantidad);
             this.Controls.Add(this.label4);
@@ -212,6 +192,7 @@
             this.Name = "Comprar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar";
+            this.Load += new System.EventHandler(this.Comprar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,15 +200,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_proveedor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Vender;
+        private System.Windows.Forms.Button btn_comprar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Calcular;
-        private System.Windows.Forms.TextBox txt_Precio;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Cantidad;
         private System.Windows.Forms.Label label4;

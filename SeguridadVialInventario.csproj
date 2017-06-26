@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="conexion.cs" />
     <Compile Include="DAOClientes.cs" />
+    <Compile Include="DAOComprar.cs" />
     <Compile Include="DAOMovimientos.cs" />
     <Compile Include="DAOProductos.cs" />
     <Compile Include="DAOProveedores.cs" />

@@ -40,7 +40,7 @@ namespace SeguridadVialInventario
         {
             dgvMovimientos.DataSource = DAOMovimientos.Buscar(con, Nombre);
         }
-        private void txt_filtrar_KeyDown(object sender, KeyEventArgs e)
+        private void txt_filtrar_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -57,6 +57,17 @@ namespace SeguridadVialInventario
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void txt_filtrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

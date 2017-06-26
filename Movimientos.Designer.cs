@@ -50,6 +50,7 @@
             this.button1.Size = new System.Drawing.Size(35, 29);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -60,9 +61,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 31);
+            this.label1.Size = new System.Drawing.Size(177, 31);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Proveedores";
+            this.label1.Text = "Movimientos";
             // 
             // dgvMovimientos
             // 
@@ -82,10 +83,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMovimientos.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMovimientos.Enabled = false;
-            this.dgvMovimientos.Location = new System.Drawing.Point(46, 90);
+            this.dgvMovimientos.Location = new System.Drawing.Point(45, 103);
             this.dgvMovimientos.Name = "dgvMovimientos";
             this.dgvMovimientos.ReadOnly = true;
-            this.dgvMovimientos.Size = new System.Drawing.Size(727, 323);
+            this.dgvMovimientos.Size = new System.Drawing.Size(727, 169);
             this.dgvMovimientos.TabIndex = 20;
             // 
             // pictureBox1
@@ -107,12 +108,14 @@
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
             this.txt_filtrar.TabIndex = 18;
+            this.txt_filtrar.TextChanged += new System.EventHandler(this.txt_filtrar_TextChanged);
+            this.txt_filtrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_filtrar_KeyDown_1);
             // 
             // Movimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 437);
+            this.ClientSize = new System.Drawing.Size(802, 291);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMovimientos);

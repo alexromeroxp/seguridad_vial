@@ -88,6 +88,21 @@ namespace SeguridadVialInventario
                 Precio.precio_venta = reader.GetFloat(0);
             }
             return Precio.precio_venta;
+            
+            
+        }
+        public static float BuscarPrecioCompra(MySqlConnection con, DAOProductos Precio)
+        {
+
+            MySqlCommand comando = new MySqlCommand(string.Format("select precio_compra from productos where id_producto='{0}'", Precio.precio_compra), con);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                Precio.precio_compra = reader.GetFloat(0);
+            }
+            return Precio.precio_compra;
+
+
         }
         public static int Agregar(MySqlConnection con, DAOProductos Productos)
         {
