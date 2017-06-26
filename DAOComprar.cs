@@ -45,6 +45,8 @@ namespace SeguridadVialInventario
             int retorno = 0;
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO Compras (id_compra,id_proveedor,cantidad,id_producto,fecha_compra,total) values ('{0}','{1}','{2}','{3}','{4}','{5}')",Comprar.id,Comprar.id_proveedor,Comprar.cantidad,Comprar.id_producto,Comprar.fecha_compra,Comprar.total), con);
             retorno = comando.ExecuteNonQuery();
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO movimientos (id_movimiento,nombre_movimiento,fecha_movimiento,cantidad,id_cliente,id_proveedor,total) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", Comprar.id, "compra", Comprar.fecha_compra, Comprar.cantidad, "null", Comprar.id_proveedor, Comprar.total), con);
+            retorno = comando2.ExecuteNonQuery();
 
             return retorno;
         }

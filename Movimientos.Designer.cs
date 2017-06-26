@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvMovimientos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).BeginInit();
+            this.dgvMovimientos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,30 +65,6 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Movimientos";
             // 
-            // dgvMovimientos
-            // 
-            this.dgvMovimientos.AllowUserToAddRows = false;
-            this.dgvMovimientos.AllowUserToDeleteRows = false;
-            this.dgvMovimientos.AllowUserToResizeColumns = false;
-            this.dgvMovimientos.AllowUserToResizeRows = false;
-            this.dgvMovimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMovimientos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMovimientos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMovimientos.Enabled = false;
-            this.dgvMovimientos.Location = new System.Drawing.Point(45, 103);
-            this.dgvMovimientos.Name = "dgvMovimientos";
-            this.dgvMovimientos.ReadOnly = true;
-            this.dgvMovimientos.Size = new System.Drawing.Size(727, 169);
-            this.dgvMovimientos.TabIndex = 20;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -111,21 +87,41 @@
             this.txt_filtrar.TextChanged += new System.EventHandler(this.txt_filtrar_TextChanged);
             this.txt_filtrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_filtrar_KeyDown_1);
             // 
+            // dgvMovimientos
+            // 
+            this.dgvMovimientos.AllowUserToAddRows = false;
+            this.dgvMovimientos.AllowUserToDeleteRows = false;
+            this.dgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMovimientos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMovimientos.Location = new System.Drawing.Point(45, 90);
+            this.dgvMovimientos.MultiSelect = false;
+            this.dgvMovimientos.Name = "dgvMovimientos";
+            this.dgvMovimientos.ReadOnly = true;
+            this.dgvMovimientos.Size = new System.Drawing.Size(727, 177);
+            this.dgvMovimientos.TabIndex = 23;
+            // 
             // Movimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 291);
+            this.Controls.Add(this.dgvMovimientos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvMovimientos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_filtrar);
             this.Name = "Movimientos";
             this.Text = "Movimientos";
             this.Load += new System.EventHandler(this.Movimientos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,8 +131,8 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvMovimientos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_filtrar;
+        private System.Windows.Forms.DataGridView dgvMovimientos;
     }
 }
