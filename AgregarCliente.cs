@@ -34,6 +34,7 @@ namespace SeguridadVialInventario
 
         private void AgregarCliente_Load(object sender, EventArgs e)
         {
+            cb_tipopersona.SelectedIndex = 0;
 
         }
 
@@ -51,17 +52,15 @@ namespace SeguridadVialInventario
 
                             DAOClientes Cliente = new DAOClientes();
                             Cliente.nombre = txt_nombre.Text;
-                            Cliente.apellidos = txt_apellidos.Text;
+                            Cliente.tipo_persona = cb_tipopersona.Text;
                             Cliente.telefono = txt_telefono.Text;
-                            Cliente.credito = cb_credito.Text;                                                    
                             int resultado = DAOClientes.Agregar(con.con, Cliente);
 
                             if (resultado > 0)
                             {
                                 txt_nombre.Clear();
-                                txt_apellidos.Clear();
                                 txt_telefono.Clear();
-                                cb_credito.Text = "";
+                                cb_tipopersona.Text = "";
 
                             }
 

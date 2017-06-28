@@ -107,10 +107,9 @@ namespace SeguridadVialInventario
 
             String Identificador = dgvClientes.CurrentRow.Cells[0].Value.ToString();
             string Nombre = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-            string apellidos = dgvClientes.CurrentRow.Cells[2].Value.ToString();
-            String credito = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+            string tipo_persona = dgvClientes.CurrentRow.Cells[2].Value.ToString();
 
-            String telefono = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+            String telefono = dgvClientes.CurrentRow.Cells[3].Value.ToString();
             if (selectedRowCount > 0)
                 MessageBox.Show(Nombre);
             if (Catalogos.formulario.Clientes == null)
@@ -118,9 +117,8 @@ namespace SeguridadVialInventario
                 ModificarCliente mc = new ModificarCliente();
                 mc.id = Identificador;
                 mc.nombre = Nombre;
-                mc.apellidos = apellidos;
                 mc.telefono = telefono;
-                mc.credito = credito;
+                mc.tipo_persona = tipo_persona;
 
                 mc.Show();
             }
@@ -129,9 +127,8 @@ namespace SeguridadVialInventario
                 ModificarCliente mc = new ModificarCliente();
                 mc.id = Identificador;
                 mc.nombre = Nombre;
-                mc.apellidos = apellidos;
                 mc.telefono = telefono;
-                mc.credito = credito;
+                mc.tipo_persona = tipo_persona;
 
                 mc.Show();
             }

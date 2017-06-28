@@ -23,6 +23,7 @@ namespace SeguridadVialInventario
         public string stock_maximo;
         public string stock_minimo;
         conexion con = new conexion();
+        DAOProveedores nombre_proveedor = new DAOProveedores();
 
         public ModificarProducto()
         {
@@ -47,9 +48,9 @@ namespace SeguridadVialInventario
                     da.Fill(dt);
 
 
-                    cb_proveedor.ValueMember = "id_proveedor";
+                    cb_proveedor.ValueMember = "nombre";
 
-                    cb_proveedor.DisplayMember = "id_proveedor";
+                    cb_proveedor.DisplayMember = "nombre";
                     cb_proveedor.DataSource = dt;
                     cb_estatus.SelectedIndex = 0
                     ;
@@ -84,7 +85,9 @@ namespace SeguridadVialInventario
                         Productos.precio_compra = float.Parse(txt_precio_compra.Text);
                         Productos.precio_venta = float.Parse(txt_precio_venta.Text);
                         Productos.id = Convert.ToInt32(id);
-                        Productos.id_proveedor = Convert.ToInt32(cb_proveedor.Text);
+                        nombre_proveedor.nombre = cb_proveedor.Text;
+                        DAOProveedores.Buscarid(con.con, nombre_proveedor);
+                        Productos.id_proveedor = nombre_proveedor.id;
                         Productos.estatus = Convert.ToString(cb_estatus.Text);
 
 

@@ -32,12 +32,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_AgregarCliente = new System.Windows.Forms.Button();
-            this.cb_credito = new System.Windows.Forms.ComboBox();
+            this.cb_tipopersona = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_apellidos = new System.Windows.Forms.TextBox();
             this.txt_telefono = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -73,21 +71,24 @@
             this.btn_AgregarCliente.FlatAppearance.BorderSize = 3;
             this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
-            this.btn_AgregarCliente.Location = new System.Drawing.Point(270, 197);
+            this.btn_AgregarCliente.Location = new System.Drawing.Point(271, 132);
             this.btn_AgregarCliente.Name = "btn_AgregarCliente";
             this.btn_AgregarCliente.Size = new System.Drawing.Size(56, 46);
             this.btn_AgregarCliente.TabIndex = 33;
             this.btn_AgregarCliente.UseVisualStyleBackColor = false;
             this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
             // 
-            // cb_credito
+            // cb_tipopersona
             // 
-            this.cb_credito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_credito.FormattingEnabled = true;
-            this.cb_credito.Location = new System.Drawing.Point(191, 80);
-            this.cb_credito.Name = "cb_credito";
-            this.cb_credito.Size = new System.Drawing.Size(136, 24);
-            this.cb_credito.TabIndex = 32;
+            this.cb_tipopersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tipopersona.FormattingEnabled = true;
+            this.cb_tipopersona.Items.AddRange(new object[] {
+            "Moral",
+            "Fisica"});
+            this.cb_tipopersona.Location = new System.Drawing.Point(191, 80);
+            this.cb_tipopersona.Name = "cb_tipopersona";
+            this.cb_tipopersona.Size = new System.Drawing.Size(136, 24);
+            this.cb_tipopersona.TabIndex = 32;
             // 
             // label4
             // 
@@ -95,25 +96,15 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(187, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.Size = new System.Drawing.Size(118, 20);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Credito";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Apellidos";
+            this.label4.Text = "Tipo persona:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 121);
+            this.label2.Location = new System.Drawing.Point(12, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 26;
@@ -130,19 +121,10 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Nombre";
             // 
-            // txt_apellidos
-            // 
-            this.txt_apellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellidos.Location = new System.Drawing.Point(11, 148);
-            this.txt_apellidos.Multiline = true;
-            this.txt_apellidos.Name = "txt_apellidos";
-            this.txt_apellidos.Size = new System.Drawing.Size(159, 28);
-            this.txt_apellidos.TabIndex = 21;
-            // 
             // txt_telefono
             // 
             this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono.Location = new System.Drawing.Point(190, 148);
+            this.txt_telefono.Location = new System.Drawing.Point(15, 151);
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(136, 27);
@@ -161,16 +143,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 257);
+            this.ClientSize = new System.Drawing.Size(334, 185);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.btn_AgregarCliente);
-            this.Controls.Add(this.cb_credito);
+            this.Controls.Add(this.cb_tipopersona);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_apellidos);
             this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.txt_nombre);
             this.Name = "AgregarCliente";
@@ -186,12 +166,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Button btn_AgregarCliente;
-        private System.Windows.Forms.ComboBox cb_credito;
+        private System.Windows.Forms.ComboBox cb_tipopersona;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_apellidos;
         private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.TextBox txt_nombre;
     }

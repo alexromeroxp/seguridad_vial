@@ -15,6 +15,7 @@ namespace SeguridadVialInventario
     public partial class AgregarProducto : Form
     {
         conexion con = new conexion();
+        DAOProveedores nombre_proveedor = new DAOProveedores();
         public AgregarProducto()
         {
             InitializeComponent();
@@ -51,9 +52,9 @@ namespace SeguridadVialInventario
                 da.Fill(dt);
 
 
-                cb_proveedor.ValueMember = "id_proveedor";
+                cb_proveedor.ValueMember = "nombre";
 
-                cb_proveedor.DisplayMember = "id_proveedor";
+                cb_proveedor.DisplayMember = "nombre";
                 cb_proveedor.DataSource = dt;
 
                 ;
@@ -81,9 +82,9 @@ namespace SeguridadVialInventario
 
                             DAOProductos Producto = new DAOProductos();
                             Producto.nombre = txt_nombre.Text;
-                            Producto.id_proveedor = int.Parse(cb_proveedor.Text);
-                            
-                            
+                            nombre_proveedor.nombre = cb_proveedor.Text;
+                            DAOProveedores.Buscarid(con.con, nombre_proveedor);
+                            Producto.id_proveedor = nombre_proveedor.id;
                             Producto.precio_compra =float.Parse( txt_precio_compra.Text);
                             Producto.precio_venta = float.Parse(txt_precio_venta.Text);
                             Producto.stock_minimo = int.Parse(txt_stock_minimo.Text);

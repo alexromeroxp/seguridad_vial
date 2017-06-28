@@ -10,11 +10,11 @@ namespace SeguridadVialInventario
    public class DAOVender
     {
         public int id { get; set; }
-        public int id_producto { get; set; }
-        public int id_cliente { get; set; }
+        public string producto { get; set; }
+        public int id_movimiento { get; set; }
+        public string cliente { get; set; }
         public int cantidad { get; set; }
         public float total { get; set; }
-
         public string fecha_venta { get; set; }
        
         
@@ -23,11 +23,12 @@ namespace SeguridadVialInventario
         {
 
         }
-        public DAOVender(int id, int id_producto, int id_cliente,int cantidad, float total, string fecha_venta)
+        public DAOVender(int id, string producto, int id_movimiento, string cliente,int cantidad, float total, string fecha_venta)
         {
             this.id =id;
-            this.id_producto = id_producto;
-            this.id_cliente = id_cliente;
+            this.producto = producto;
+            this.id_movimiento = id_movimiento;
+            this.cliente = cliente;
             this.cantidad = cantidad;
             this.total = total;
             this.fecha_venta = fecha_venta;
@@ -39,9 +40,9 @@ namespace SeguridadVialInventario
         public static int Agregar(MySqlConnection con, DAOVender vender)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO ventas (id_venta,id_producto,id_cliente,cantidad,total,fecha_venta) values ('{0}','{1}','{2}','{3}','{4}','{5}')", vender.id,vender.id_producto,vender.id_cliente,vender.cantidad,vender.total,vender.fecha_venta), con);
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO ventas (id_venta,producto,cliente,cantidad,total,fecha_venta) values ('{0}','{1}','{2}','{3}','{4}','{5}')", vender.id,vender.producto,vender.cliente,vender.cantidad,vender.total,vender.fecha_venta), con);
             retorno = comando.ExecuteNonQuery();
-            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO movimientos (id_movimiento,nombre_movimiento,fecha_movimiento,cantidad,id_cliente,id_proveedor,total) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", vender.id,"venta", vender.fecha_venta, vender.cantidad, vender.id_cliente,"null", vender.total), con);
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO movimientos (id_movimiento,nombre_movimiento,fecha_movimiento,cantidad,cliente,proveedor,total) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", vender.id_movimiento,"venta", vender.fecha_venta, vender.cantidad, vender.cliente,"sin proveedor", vender.total), con);
             retorno = comando2.ExecuteNonQuery();
             return retorno;
         }

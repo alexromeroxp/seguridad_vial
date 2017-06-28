@@ -67,6 +67,18 @@ namespace SeguridadVialInventario
 
             return retorno;
         }
+        public static int Buscarid(MySqlConnection con,DAOProveedores nombre)
+        {
+            
+            MySqlCommand comando = new MySqlCommand(string.Format("select id_proveedor from proveedores where nombre ='{0}';",nombre.nombre), con);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                nombre.id = reader.GetInt32(0);
+            }
+            reader.Close();
+            return nombre.id;
+        }
     }
 }
 

@@ -15,9 +15,8 @@ namespace SeguridadVialInventario
     public partial class ModificarCliente : Form
     {
         public string nombre;
-        public string apellidos;
+        public string tipo_persona;
         public string telefono;
-        public string credito;
         public string id;
         conexion con = new conexion();
         public ModificarCliente()
@@ -29,12 +28,11 @@ namespace SeguridadVialInventario
         private void ModificarCliente_Load(object sender, EventArgs e)
         {
             txt_nombre.Text = nombre;
-            txt_apellidos.Text = apellidos;
             txt_telefono.Text = telefono;
-            cb_credito.SelectedIndex = 0;
+            cb_tipopersona.SelectedIndex = 0;
         }
 
-        private void btn_ModificarCliente_Click(object sender, EventArgs e)
+        private void btn_modificarcliente_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Seguro que desea Modificar?", "Confirmación Modificar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -46,7 +44,7 @@ namespace SeguridadVialInventario
                         DAOClientes Cliente = new DAOClientes();
 
                         Cliente.nombre = txt_nombre.Text;
-                        Cliente.apellidos = txt_apellidos.Text;
+                        Cliente.tipo_persona = cb_tipopersona.Text;
                         Cliente.telefono = txt_telefono.Text;
                         
 
@@ -58,10 +56,9 @@ namespace SeguridadVialInventario
 
                         if (resultado > 0)
                         {
-                            cb_credito.Text = "";
+                            cb_tipopersona.Text = "";
                             txt_telefono.Clear();
                             txt_nombre.Clear();
-                            txt_apellidos.Clear();
 
                         }
 
@@ -87,5 +84,7 @@ namespace SeguridadVialInventario
             this.Hide();
             Catalogos.formulario.Clientes.Show();
         }
+
+       
     }
 }

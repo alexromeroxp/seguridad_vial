@@ -40,9 +40,9 @@ namespace SeguridadVialInventario
                 da.Fill(dt);
 
 
-                cb_proveedor.ValueMember = "id_proveedor";
+                cb_proveedor.ValueMember = "nombre";
 
-                cb_proveedor.DisplayMember = "id_proveedor";
+                cb_proveedor.DisplayMember = "nombre";
                 cb_proveedor.DataSource = dt;
                 MySqlCommand cmd1 = new MySqlCommand("Select * from productos", con.con);
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
@@ -50,9 +50,9 @@ namespace SeguridadVialInventario
                 da1.Fill(dt1);
 
 
-                cb_Producto.ValueMember = "id_producto";
+                cb_Producto.ValueMember = "nombre";
 
-                cb_Producto.DisplayMember = "id_producto";
+                cb_Producto.DisplayMember = "nombre";
                 cb_Producto.DataSource = dt1;
 
 
@@ -62,7 +62,7 @@ namespace SeguridadVialInventario
 
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
-            precio_comp.precio_compra = float.Parse(cb_Producto.Text);
+            precio_comp.nombre = cb_Producto.Text;
             try
             {
                 if (con.Abrirconexion() == true)
@@ -92,8 +92,8 @@ namespace SeguridadVialInventario
                     {
 
                         DAOComprar Comprar = new DAOComprar();
-                        Comprar.id_proveedor = int.Parse(cb_proveedor.Text);
-                        Comprar.id_producto = int.Parse(cb_Producto.Text);
+                        Comprar.proveedor = cb_proveedor.Text;
+                        Comprar.producto = cb_Producto.Text;
                         Comprar.cantidad = int.Parse(txt_Cantidad.Text);
                         DateTime localDate = DateTime.Now;
                         Comprar.fecha_compra = localDate.ToString();

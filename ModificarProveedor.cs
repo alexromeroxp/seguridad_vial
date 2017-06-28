@@ -57,7 +57,7 @@ namespace SeguridadVialInventario
                         Proveedor.nombre = txt_nombre.Text;
                         Proveedor.rfc = txt_rfc.Text;
                         Proveedor.telefono = txt_telefono.Text;
-
+                        Proveedor.estatus = cb_estatus.Text;
 
                         Proveedor.id = Convert.ToInt32(id);
 

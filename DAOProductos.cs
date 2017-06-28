@@ -14,38 +14,42 @@ namespace SeguridadVialInventario
         public float precio_compra { get; set; }
         public float precio_venta { get; set; }
         public string estatus { get; set; }
-        public int id_proveedor { get; set; }
+        public string nombre_proveedor { get; set; }
+
         public int cantidad { get; set; }
         public int stock_minimo { get; set; }
         public int stock_maximo { get; set; }
        
 
         public float totalcompra { get; set;}
+        public int id_proveedor { get; set; }
+
 
         public DAOProductos()
         {
 
         }
-        public DAOProductos(int Id,string Nombre,float Precio_Compra,float Precio_Venta,string estatus,int id_proveedor, int Cantidad,int stock_minimo,int stock_maximo,float TotalCompra)
+        public DAOProductos(int Id,string Nombre,float Precio_Compra,float Precio_Venta,string estatus,string nombre_proveedor, int Cantidad,int stock_minimo,int stock_maximo,float TotalCompra,int id_proveedor)
         {
             this.id = Id;
             this.nombre = Nombre;
             this.precio_compra = Precio_Compra;
             this.precio_venta = Precio_Venta;
             this.estatus = estatus;
-            this.id_proveedor = id_proveedor;
+            this.nombre_proveedor = nombre_proveedor;
             this.cantidad = Cantidad;
             this.stock_minimo = stock_minimo;
             this.totalcompra = TotalCompra;
             this.stock_minimo = stock_maximo;
-         
-            
+            this.id_proveedor = id_proveedor;
+
+
         }
         public static IList<DAOProductos> Buscar(MySqlConnection con, string Nombre)
         {
 
             List<DAOProductos> lista = new List<DAOProductos>();
-            MySqlCommand comando = new MySqlCommand(string.Format("SELECT id_producto, nombre,precio_compra, precio_venta,estatus,id_proveedor,cantidad,stock_minimo,stock_maximo,precio_compra * cantidad as 'TotalCompra' from productos where nombre LIKE ('%{0}%')", Nombre),con);
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT productos.id_producto, productos.nombre,productos.precio_compra, productos.precio_venta,productos.estatus,proveedores.nombre,productos.cantidad,productos.stock_minimo,productos.stock_maximo,productos.precio_compra * productos.cantidad as 'TotalCompra',productos.id_proveedor from productos,proveedores where productos.nombre LIKE ('%{0}%') and productos.id_proveedor=proveedores.id_proveedor", Nombre),con);
             MySqlDataReader reader = comando.ExecuteReader();
             
             while (reader.Read())
@@ -56,11 +60,12 @@ namespace SeguridadVialInventario
                 Producto.precio_compra = reader.GetFloat(2);
                 Producto.precio_venta = reader.GetFloat(3);
                 Producto.estatus = reader.GetString(4);
-                Producto.id_proveedor = reader.GetInt32(5);
+                Producto.nombre_proveedor = reader.GetString(5);
                 Producto.cantidad = reader.GetInt32(6);
                 Producto.stock_minimo = reader.GetInt32(7);
                 Producto.stock_maximo = reader.GetInt32(8);
                 Producto.totalcompra = reader.GetFloat(9);
+                Producto.id_proveedor = reader.GetInt32(10);
 
                 lista.Add(Producto);
             }
@@ -81,7 +86,7 @@ namespace SeguridadVialInventario
         public static float BuscarPrecio(MySqlConnection con,DAOProductos Precio)
         {
             
-            MySqlCommand comando = new MySqlCommand(string.Format("select precio_venta from productos where id_producto='{0}'",Precio.precio_venta), con);
+            MySqlCommand comando = new MySqlCommand(string.Format("select precio_venta from productos where nombre='{0}'",Precio.nombre), con);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
@@ -94,7 +99,7 @@ namespace SeguridadVialInventario
         public static float BuscarPrecioCompra(MySqlConnection con, DAOProductos Precio)
         {
 
-            MySqlCommand comando = new MySqlCommand(string.Format("select precio_compra from productos where id_producto='{0}'", Precio.precio_compra), con);
+            MySqlCommand comando = new MySqlCommand(string.Format("select precio_compra from productos where nombre='{0}'", Precio.nombre), con);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
