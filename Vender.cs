@@ -42,20 +42,20 @@ namespace SeguridadVialInventario
                 da.Fill(dt);
 
 
-                cb_Producto.ValueMember = "nombre";
+                cb_cliente.ValueMember = "nombre";
 
-                cb_Producto.DisplayMember = "nombre";
-                cb_Producto.DataSource = dt;
-                MySqlCommand cmd1 = new MySqlCommand("Select * from productos", con.con);
+                cb_cliente.DisplayMember = "nombre";
+                cb_cliente.DataSource = dt;
+                MySqlCommand cmd1 = new MySqlCommand("Select * from productos where estatus='A' and cantidad>0", con.con);
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
                 DataTable dt1 = new DataTable();
                 da1.Fill(dt1);
 
 
-                cb_cliente.ValueMember = "nombre";
+                cb_Producto.ValueMember = "nombre";
 
-                cb_cliente.DisplayMember = "nombre";
-                cb_cliente.DataSource = dt1;
+                cb_Producto.DisplayMember = "nombre";
+                cb_Producto.DataSource = dt1;
                 
 
             }
@@ -84,13 +84,12 @@ namespace SeguridadVialInventario
 
         private void btn_AgregarCliente_Click(object sender, EventArgs e)
         {
-            id_producto.Add(cb_cliente.Text);
-            id_cliente.Add(cb_Producto.Text);
+            id_producto.Add(cb_Producto.Text);
+            id_cliente.Add(cb_cliente.Text);
             DateTime localDate = DateTime.Now;
             fecha_venta.Add(localDate.ToString());
-            id_producto.Add(cb_cliente.Text);
             cantidad.Add(txt_Cantidad.Text);
-            precio_vent.nombre =cb_cliente.Text;
+            precio_vent.nombre =cb_Producto.Text;
             try
             {
                 if (con.Abrirconexion() == true)
@@ -107,7 +106,7 @@ namespace SeguridadVialInventario
             totall = precio_vent.precio_venta * int.Parse(txt_Cantidad.Text);
             total.Add(totall);
             totalll = totalll + totall;
-            dgv_vender.Rows.Add(cb_Producto.Text, cb_cliente.Text,txt_Cantidad.Text,totalll);
+            dgv_vender.Rows.Add(cb_cliente.Text, cb_Producto.Text,txt_Cantidad.Text,totalll);
             lbl_total.Text = totalll.ToString();
             
         }
@@ -127,13 +126,14 @@ namespace SeguridadVialInventario
 
                         for (int i = 0; i < id_cliente.Count; i++)
                         {
-                            
+                            MessageBox.Show(id_producto[i]);
                             if (i == 1)
                             {
                                 id_venta.id = DAOVender.Buscarid(con.con);
                                 Vender.id = id_venta.id;
                                 id_venta.id_movimiento = DAOMovimientos.Buscarid(con.con);
                                 Vender.id_movimiento = id_venta.id_movimiento;
+                               
 
                             }
 
@@ -175,6 +175,11 @@ namespace SeguridadVialInventario
                 Catalogos.formulario.Vender = null;
                 con.Cerrarconexion();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

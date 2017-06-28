@@ -34,18 +34,18 @@
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cb_cliente = new System.Windows.Forms.ComboBox();
+            this.cb_Producto = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Vender = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.cb_Producto = new System.Windows.Forms.ComboBox();
+            this.cb_cliente = new System.Windows.Forms.ComboBox();
             this.dgv_vender = new System.Windows.Forms.DataGridView();
-            this.btn_AgregarCliente = new System.Windows.Forms.Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_AgregarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_vender)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,14 +98,14 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Producto:";
             // 
-            // cb_cliente
+            // cb_Producto
             // 
-            this.cb_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_cliente.FormattingEnabled = true;
-            this.cb_cliente.Location = new System.Drawing.Point(18, 62);
-            this.cb_cliente.Name = "cb_cliente";
-            this.cb_cliente.Size = new System.Drawing.Size(140, 26);
-            this.cb_cliente.TabIndex = 11;
+            this.cb_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Producto.FormattingEnabled = true;
+            this.cb_Producto.Location = new System.Drawing.Point(18, 62);
+            this.cb_Producto.Name = "cb_Producto";
+            this.cb_Producto.Size = new System.Drawing.Size(140, 26);
+            this.cb_Producto.TabIndex = 11;
             // 
             // label1
             // 
@@ -156,15 +156,16 @@
             this.label2.Size = new System.Drawing.Size(65, 18);
             this.label2.TabIndex = 26;
             this.label2.Text = "Cliente:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // cb_Producto
+            // cb_cliente
             // 
-            this.cb_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Producto.FormattingEnabled = true;
-            this.cb_Producto.Location = new System.Drawing.Point(182, 62);
-            this.cb_Producto.Name = "cb_Producto";
-            this.cb_Producto.Size = new System.Drawing.Size(140, 26);
-            this.cb_Producto.TabIndex = 27;
+            this.cb_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_cliente.FormattingEnabled = true;
+            this.cb_cliente.Location = new System.Drawing.Point(182, 62);
+            this.cb_cliente.Name = "cb_cliente";
+            this.cb_cliente.Size = new System.Drawing.Size(140, 26);
+            this.cb_cliente.TabIndex = 27;
             // 
             // dgv_vender
             // 
@@ -178,20 +179,6 @@
             this.dgv_vender.Name = "dgv_vender";
             this.dgv_vender.Size = new System.Drawing.Size(443, 137);
             this.dgv_vender.TabIndex = 28;
-            // 
-            // btn_AgregarCliente
-            // 
-            this.btn_AgregarCliente.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_AgregarCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_AgregarCliente.FlatAppearance.BorderSize = 3;
-            this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
-            this.btn_AgregarCliente.Location = new System.Drawing.Point(457, 57);
-            this.btn_AgregarCliente.Name = "btn_AgregarCliente";
-            this.btn_AgregarCliente.Size = new System.Drawing.Size(40, 36);
-            this.btn_AgregarCliente.TabIndex = 34;
-            this.btn_AgregarCliente.UseVisualStyleBackColor = false;
-            this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
             // 
             // Column2
             // 
@@ -213,6 +200,20 @@
             this.Column4.HeaderText = "total";
             this.Column4.Name = "Column4";
             // 
+            // btn_AgregarCliente
+            // 
+            this.btn_AgregarCliente.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AgregarCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_AgregarCliente.FlatAppearance.BorderSize = 3;
+            this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
+            this.btn_AgregarCliente.Location = new System.Drawing.Point(457, 57);
+            this.btn_AgregarCliente.Name = "btn_AgregarCliente";
+            this.btn_AgregarCliente.Size = new System.Drawing.Size(40, 36);
+            this.btn_AgregarCliente.TabIndex = 34;
+            this.btn_AgregarCliente.UseVisualStyleBackColor = false;
+            this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
+            // 
             // Vender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,7 +222,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btn_AgregarCliente);
             this.Controls.Add(this.dgv_vender);
-            this.Controls.Add(this.cb_Producto);
+            this.Controls.Add(this.cb_cliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_Vender);
             this.Controls.Add(this.btn_Cancelar);
@@ -231,7 +232,7 @@
             this.Controls.Add(this.txt_Cantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cb_cliente);
+            this.Controls.Add(this.cb_Producto);
             this.Name = "Vender";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vender";
@@ -248,12 +249,12 @@
         private System.Windows.Forms.TextBox txt_Cantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_cliente;
+        private System.Windows.Forms.ComboBox cb_Producto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Vender;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cb_Producto;
+        private System.Windows.Forms.ComboBox cb_cliente;
         private System.Windows.Forms.DataGridView dgv_vender;
         private System.Windows.Forms.Button btn_AgregarCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

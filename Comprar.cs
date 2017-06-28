@@ -44,7 +44,7 @@ namespace SeguridadVialInventario
 
                 cb_proveedor.DisplayMember = "nombre";
                 cb_proveedor.DataSource = dt;
-                MySqlCommand cmd1 = new MySqlCommand("Select * from productos", con.con);
+                MySqlCommand cmd1 = new MySqlCommand("Select * from productos where estatus='A'", con.con);
                 MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
                 DataTable dt1 = new DataTable();
                 da1.Fill(dt1);
