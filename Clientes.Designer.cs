@@ -60,8 +60,8 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 67);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(53, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 31);
             this.label1.TabIndex = 12;
@@ -133,7 +133,7 @@
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(727, 177);
+            this.dgvClientes.Size = new System.Drawing.Size(727, 332);
             this.dgvClientes.TabIndex = 14;
             // 
             // Clientes

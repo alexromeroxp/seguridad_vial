@@ -16,7 +16,7 @@ namespace SeguridadVialInventario
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Catalogos());
+            Application.Run(new Inicio());
         }
     }
 }

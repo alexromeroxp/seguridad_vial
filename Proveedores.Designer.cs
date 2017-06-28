@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lbl_tc = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_AgregarProducto = new System.Windows.Forms.Button();
@@ -42,30 +40,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_tc
-            // 
-            this.lbl_tc.AutoSize = true;
-            this.lbl_tc.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tc.ForeColor = System.Drawing.Color.Black;
-            this.lbl_tc.Location = new System.Drawing.Point(697, 410);
-            this.lbl_tc.Name = "lbl_tc";
-            this.lbl_tc.Size = new System.Drawing.Size(49, 20);
-            this.lbl_tc.TabIndex = 16;
-            this.lbl_tc.Text = "____";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(575, 410);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Total Compra";
             // 
             // label1
             // 
@@ -159,7 +133,7 @@
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
-            this.dgvProveedores.Size = new System.Drawing.Size(727, 177);
+            this.dgvProveedores.Size = new System.Drawing.Size(727, 325);
             this.dgvProveedores.TabIndex = 18;
             // 
             // Proveedores
@@ -169,8 +143,6 @@
             this.ClientSize = new System.Drawing.Size(848, 461);
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lbl_tc);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_AgregarProducto);
@@ -187,9 +159,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_tc;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_AgregarProducto;

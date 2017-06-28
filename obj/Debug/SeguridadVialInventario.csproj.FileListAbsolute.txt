@@ -70,3 +70,24 @@ C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.Mod
 C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.Productos.resources
 C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.Properties.Resources.resources
 C:\Users\Alex\Source\Repos\seguridad_vial2\obj\Debug\SeguridadVialInventario.csproj.GenerateResource.Cache
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\SeguridadVialInventario.exe
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\SeguridadVialInventario.pdb
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\MySql.Data.dll
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\bin\Debug\MySql.Data.xml
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.csprojResolveAssemblyReference.cache
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.AgregarCliente.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.AgregarProducto.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.AgregarProveedor.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Clientes.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Comprar.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.ModificarCliente.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.ModificarProveedor.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Movimientos.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Proveedores.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Vender.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Inicio.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Catalogos.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.ModificarProducto.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Productos.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Properties.Resources.resources
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.csproj.GenerateResource.Cache

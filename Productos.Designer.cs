@@ -71,7 +71,7 @@
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(727, 177);
+            this.dgvProductos.Size = new System.Drawing.Size(727, 355);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 

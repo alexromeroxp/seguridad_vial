@@ -72,16 +72,17 @@
             // txt_Cantidad
             // 
             this.txt_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cantidad.Location = new System.Drawing.Point(333, 104);
+            this.txt_Cantidad.Location = new System.Drawing.Point(333, 62);
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(118, 24);
             this.txt_Cantidad.TabIndex = 14;
+            this.txt_Cantidad.Text = "1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(330, 83);
+            this.label4.Location = new System.Drawing.Point(330, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 18);
             this.label4.TabIndex = 13;
@@ -91,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(179, 82);
+            this.label3.Location = new System.Drawing.Point(179, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 18);
             this.label3.TabIndex = 12;
@@ -101,7 +102,7 @@
             // 
             this.cb_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Producto.FormattingEnabled = true;
-            this.cb_Producto.Location = new System.Drawing.Point(179, 104);
+            this.cb_Producto.Location = new System.Drawing.Point(18, 62);
             this.cb_Producto.Name = "cb_Producto";
             this.cb_Producto.Size = new System.Drawing.Size(140, 26);
             this.cb_Producto.TabIndex = 11;
@@ -112,7 +113,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 45);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 31);
             this.label1.TabIndex = 23;
@@ -124,7 +125,7 @@
             this.btn_Cancelar.FlatAppearance.BorderSize = 3;
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(251, 264);
+            this.btn_Cancelar.Location = new System.Drawing.Point(251, 280);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(99, 35);
             this.btn_Cancelar.TabIndex = 24;
@@ -138,7 +139,7 @@
             this.btn_Vender.FlatAppearance.BorderSize = 3;
             this.btn_Vender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Vender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Vender.Location = new System.Drawing.Point(356, 264);
+            this.btn_Vender.Location = new System.Drawing.Point(356, 280);
             this.btn_Vender.Name = "btn_Vender";
             this.btn_Vender.Size = new System.Drawing.Size(99, 35);
             this.btn_Vender.TabIndex = 25;
@@ -150,7 +151,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 83);
+            this.label2.Location = new System.Drawing.Point(15, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 18);
             this.label2.TabIndex = 26;
@@ -160,7 +161,7 @@
             // 
             this.cb_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_cliente.FormattingEnabled = true;
-            this.cb_cliente.Location = new System.Drawing.Point(18, 104);
+            this.cb_cliente.Location = new System.Drawing.Point(182, 62);
             this.cb_cliente.Name = "cb_cliente";
             this.cb_cliente.Size = new System.Drawing.Size(140, 26);
             this.cb_cliente.TabIndex = 27;
@@ -173,9 +174,9 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgv_vender.Location = new System.Drawing.Point(8, 139);
+            this.dgv_vender.Location = new System.Drawing.Point(12, 94);
             this.dgv_vender.Name = "dgv_vender";
-            this.dgv_vender.Size = new System.Drawing.Size(443, 92);
+            this.dgv_vender.Size = new System.Drawing.Size(443, 137);
             this.dgv_vender.TabIndex = 28;
             // 
             // Column1
@@ -205,9 +206,9 @@
             this.btn_AgregarCliente.FlatAppearance.BorderSize = 3;
             this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
-            this.btn_AgregarCliente.Location = new System.Drawing.Point(397, 28);
+            this.btn_AgregarCliente.Location = new System.Drawing.Point(457, 57);
             this.btn_AgregarCliente.Name = "btn_AgregarCliente";
-            this.btn_AgregarCliente.Size = new System.Drawing.Size(51, 46);
+            this.btn_AgregarCliente.Size = new System.Drawing.Size(40, 36);
             this.btn_AgregarCliente.TabIndex = 34;
             this.btn_AgregarCliente.UseVisualStyleBackColor = false;
             this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
@@ -216,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 302);
+            this.ClientSize = new System.Drawing.Size(516, 327);
             this.ControlBox = false;
             this.Controls.Add(this.btn_AgregarCliente);
             this.Controls.Add(this.dgv_vender);

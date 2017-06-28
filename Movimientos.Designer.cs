@@ -69,7 +69,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(745, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(914, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +80,7 @@
             // 
             this.txt_filtrar.BackColor = System.Drawing.Color.White;
             this.txt_filtrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(558, 56);
+            this.txt_filtrar.Location = new System.Drawing.Point(727, 62);
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
             this.txt_filtrar.TabIndex = 18;
@@ -104,14 +104,14 @@
             this.dgvMovimientos.MultiSelect = false;
             this.dgvMovimientos.Name = "dgvMovimientos";
             this.dgvMovimientos.ReadOnly = true;
-            this.dgvMovimientos.Size = new System.Drawing.Size(727, 177);
+            this.dgvMovimientos.Size = new System.Drawing.Size(896, 283);
             this.dgvMovimientos.TabIndex = 23;
             // 
             // Movimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 291);
+            this.ClientSize = new System.Drawing.Size(953, 414);
             this.Controls.Add(this.dgvMovimientos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
