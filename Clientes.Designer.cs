@@ -74,7 +74,7 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(745, 179);
+            this.button2.Location = new System.Drawing.Point(611, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 52);
             this.button2.TabIndex = 11;
@@ -88,7 +88,7 @@
             this.btn_AgregarCliente.FlatAppearance.BorderSize = 3;
             this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
-            this.btn_AgregarCliente.Location = new System.Drawing.Point(745, 110);
+            this.btn_AgregarCliente.Location = new System.Drawing.Point(611, 57);
             this.btn_AgregarCliente.Name = "btn_AgregarCliente";
             this.btn_AgregarCliente.Size = new System.Drawing.Size(61, 52);
             this.btn_AgregarCliente.TabIndex = 10;
@@ -99,7 +99,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(712, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // 
             this.txt_filtrar.BackColor = System.Drawing.Color.White;
             this.txt_filtrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(531, 20);
+            this.txt_filtrar.Location = new System.Drawing.Point(397, 29);
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
             this.txt_filtrar.TabIndex = 7;
@@ -129,18 +129,19 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvClientes.Location = new System.Drawing.Point(12, 81);
+            this.dgvClientes.Location = new System.Drawing.Point(12, 57);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(727, 332);
+            this.dgvClientes.Size = new System.Drawing.Size(593, 379);
             this.dgvClientes.TabIndex = 14;
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 439);
+            this.ClientSize = new System.Drawing.Size(684, 448);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -148,6 +149,8 @@
             this.Controls.Add(this.btn_AgregarCliente);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_filtrar);
+            this.MaximumSize = new System.Drawing.Size(700, 487);
+            this.MinimumSize = new System.Drawing.Size(700, 487);
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);

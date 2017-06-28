@@ -53,6 +53,7 @@ namespace SeguridadVialInventario
         public void ListarProveedores(MySqlConnection con, string Nombre)
         {
             dgvProveedores.DataSource = DAOProveedores.Buscar(con, Nombre);
+            dgvProveedores.AutoResizeColumns();
         }
         private void txt_filtrar_KeyDown_1(object sender, KeyEventArgs e)
         {

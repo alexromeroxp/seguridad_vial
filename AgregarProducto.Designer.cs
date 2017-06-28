@@ -46,6 +46,8 @@
             this.btn_AgregarProducto = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_nombre
@@ -63,8 +65,8 @@
             this.txt_precio_compra.Location = new System.Drawing.Point(191, 150);
             this.txt_precio_compra.Multiline = true;
             this.txt_precio_compra.Name = "txt_precio_compra";
-            this.txt_precio_compra.Size = new System.Drawing.Size(136, 27);
-            this.txt_precio_compra.TabIndex = 1;
+            this.txt_precio_compra.Size = new System.Drawing.Size(113, 27);
+            this.txt_precio_compra.TabIndex = 3;
             this.txt_precio_compra.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txt_precio_venta
@@ -73,8 +75,8 @@
             this.txt_precio_venta.Location = new System.Drawing.Point(12, 150);
             this.txt_precio_venta.Multiline = true;
             this.txt_precio_venta.Name = "txt_precio_venta";
-            this.txt_precio_venta.Size = new System.Drawing.Size(159, 28);
-            this.txt_precio_venta.TabIndex = 3;
+            this.txt_precio_venta.Size = new System.Drawing.Size(120, 28);
+            this.txt_precio_venta.TabIndex = 2;
             // 
             // txt_stock_maximo
             // 
@@ -82,16 +84,16 @@
             this.txt_stock_maximo.Location = new System.Drawing.Point(12, 227);
             this.txt_stock_maximo.Multiline = true;
             this.txt_stock_maximo.Name = "txt_stock_maximo";
-            this.txt_stock_maximo.Size = new System.Drawing.Size(159, 27);
+            this.txt_stock_maximo.Size = new System.Drawing.Size(134, 27);
             this.txt_stock_maximo.TabIndex = 4;
             // 
             // txt_stock_minimo
             // 
             this.txt_stock_minimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_stock_minimo.Location = new System.Drawing.Point(191, 224);
+            this.txt_stock_minimo.Location = new System.Drawing.Point(191, 227);
             this.txt_stock_minimo.Multiline = true;
             this.txt_stock_minimo.Name = "txt_stock_minimo";
-            this.txt_stock_minimo.Size = new System.Drawing.Size(136, 29);
+            this.txt_stock_minimo.Size = new System.Drawing.Size(113, 27);
             this.txt_stock_minimo.TabIndex = 5;
             // 
             // txt_cantidad
@@ -100,7 +102,7 @@
             this.txt_cantidad.Location = new System.Drawing.Point(12, 292);
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(159, 29);
+            this.txt_cantidad.Size = new System.Drawing.Size(134, 29);
             this.txt_cantidad.TabIndex = 6;
             // 
             // label1
@@ -178,12 +180,13 @@
             // 
             // cb_proveedor
             // 
+            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_proveedor.FormattingEnabled = true;
             this.cb_proveedor.Location = new System.Drawing.Point(192, 82);
             this.cb_proveedor.Name = "cb_proveedor";
             this.cb_proveedor.Size = new System.Drawing.Size(136, 24);
-            this.cb_proveedor.TabIndex = 15;
+            this.cb_proveedor.TabIndex = 1;
             // 
             // btn_AgregarProducto
             // 
@@ -192,10 +195,10 @@
             this.btn_AgregarProducto.FlatAppearance.BorderSize = 3;
             this.btn_AgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarProducto.Image")));
-            this.btn_AgregarProducto.Location = new System.Drawing.Point(192, 278);
+            this.btn_AgregarProducto.Location = new System.Drawing.Point(152, 287);
             this.btn_AgregarProducto.Name = "btn_AgregarProducto";
-            this.btn_AgregarProducto.Size = new System.Drawing.Size(56, 46);
-            this.btn_AgregarProducto.TabIndex = 16;
+            this.btn_AgregarProducto.Size = new System.Drawing.Size(39, 34);
+            this.btn_AgregarProducto.TabIndex = 7;
             this.btn_AgregarProducto.UseVisualStyleBackColor = false;
             this.btn_AgregarProducto.Click += new System.EventHandler(this.btn_AgregarProducto_Click);
             // 
@@ -208,7 +211,7 @@
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 29);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -222,12 +225,34 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Agregar Producto";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(138, 154);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 24);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "$";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(310, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 24);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "$";
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 382);
+            this.ClientSize = new System.Drawing.Size(351, 346);
             this.ControlBox = false;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_AgregarProducto);
@@ -273,5 +298,7 @@
         private System.Windows.Forms.Button btn_AgregarProducto;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

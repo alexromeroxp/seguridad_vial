@@ -48,6 +48,8 @@
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cb_estatus = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
@@ -69,7 +71,7 @@
             this.btn_regresar.Location = new System.Drawing.Point(12, 12);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(35, 29);
-            this.btn_regresar.TabIndex = 34;
+            this.btn_regresar.TabIndex = 9;
             this.btn_regresar.UseVisualStyleBackColor = false;
             this.btn_regresar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -83,18 +85,19 @@
             this.btn_modificarproducto.Location = new System.Drawing.Point(294, 340);
             this.btn_modificarproducto.Name = "btn_modificarproducto";
             this.btn_modificarproducto.Size = new System.Drawing.Size(56, 46);
-            this.btn_modificarproducto.TabIndex = 33;
+            this.btn_modificarproducto.TabIndex = 8;
             this.btn_modificarproducto.UseVisualStyleBackColor = false;
             this.btn_modificarproducto.Click += new System.EventHandler(this.btn_modificarproducto_Click);
             // 
             // cb_proveedor
             // 
+            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_proveedor.FormattingEnabled = true;
             this.cb_proveedor.Location = new System.Drawing.Point(192, 82);
             this.cb_proveedor.Name = "cb_proveedor";
             this.cb_proveedor.Size = new System.Drawing.Size(158, 24);
-            this.cb_proveedor.TabIndex = 32;
+            this.cb_proveedor.TabIndex = 1;
             // 
             // label7
             // 
@@ -173,7 +176,7 @@
             this.txt_cantidad.Multiline = true;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(159, 29);
-            this.txt_cantidad.TabIndex = 24;
+            this.txt_cantidad.TabIndex = 6;
             // 
             // txt_stock_minimo
             // 
@@ -182,7 +185,7 @@
             this.txt_stock_minimo.Multiline = true;
             this.txt_stock_minimo.Name = "txt_stock_minimo";
             this.txt_stock_minimo.Size = new System.Drawing.Size(159, 29);
-            this.txt_stock_minimo.TabIndex = 23;
+            this.txt_stock_minimo.TabIndex = 5;
             // 
             // txt_stock_maximo
             // 
@@ -191,7 +194,7 @@
             this.txt_stock_maximo.Multiline = true;
             this.txt_stock_maximo.Name = "txt_stock_maximo";
             this.txt_stock_maximo.Size = new System.Drawing.Size(159, 27);
-            this.txt_stock_maximo.TabIndex = 22;
+            this.txt_stock_maximo.TabIndex = 4;
             // 
             // txt_precio_venta
             // 
@@ -199,8 +202,8 @@
             this.txt_precio_venta.Location = new System.Drawing.Point(12, 150);
             this.txt_precio_venta.Multiline = true;
             this.txt_precio_venta.Name = "txt_precio_venta";
-            this.txt_precio_venta.Size = new System.Drawing.Size(159, 28);
-            this.txt_precio_venta.TabIndex = 21;
+            this.txt_precio_venta.Size = new System.Drawing.Size(120, 28);
+            this.txt_precio_venta.TabIndex = 2;
             // 
             // txt_precio_compra
             // 
@@ -208,8 +211,8 @@
             this.txt_precio_compra.Location = new System.Drawing.Point(191, 150);
             this.txt_precio_compra.Multiline = true;
             this.txt_precio_compra.Name = "txt_precio_compra";
-            this.txt_precio_compra.Size = new System.Drawing.Size(159, 27);
-            this.txt_precio_compra.TabIndex = 20;
+            this.txt_precio_compra.Size = new System.Drawing.Size(113, 27);
+            this.txt_precio_compra.TabIndex = 3;
             // 
             // txt_nombre
             // 
@@ -218,7 +221,7 @@
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(159, 27);
-            this.txt_nombre.TabIndex = 19;
+            this.txt_nombre.TabIndex = 0;
             // 
             // label9
             // 
@@ -241,8 +244,28 @@
             this.cb_estatus.Location = new System.Drawing.Point(191, 292);
             this.cb_estatus.Name = "cb_estatus";
             this.cb_estatus.Size = new System.Drawing.Size(158, 24);
-            this.cb_estatus.TabIndex = 38;
+            this.cb_estatus.TabIndex = 7;
             this.cb_estatus.SelectedIndexChanged += new System.EventHandler(this.cb_estatus_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(310, 153);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(21, 24);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "$";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(138, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 24);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "$";
             // 
             // ModificarProducto
             // 
@@ -250,6 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 398);
             this.ControlBox = false;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.cb_estatus);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -299,5 +324,7 @@
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cb_estatus;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -60,7 +60,7 @@
             this.btn_regresar.Location = new System.Drawing.Point(11, 10);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(35, 29);
-            this.btn_regresar.TabIndex = 34;
+            this.btn_regresar.TabIndex = 4;
             this.btn_regresar.UseVisualStyleBackColor = false;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
@@ -74,12 +74,13 @@
             this.btn_AgregarCliente.Location = new System.Drawing.Point(271, 132);
             this.btn_AgregarCliente.Name = "btn_AgregarCliente";
             this.btn_AgregarCliente.Size = new System.Drawing.Size(56, 46);
-            this.btn_AgregarCliente.TabIndex = 33;
+            this.btn_AgregarCliente.TabIndex = 3;
             this.btn_AgregarCliente.UseVisualStyleBackColor = false;
             this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
             // 
             // cb_tipopersona
             // 
+            this.cb_tipopersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tipopersona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tipopersona.FormattingEnabled = true;
             this.cb_tipopersona.Items.AddRange(new object[] {
@@ -88,7 +89,7 @@
             this.cb_tipopersona.Location = new System.Drawing.Point(191, 80);
             this.cb_tipopersona.Name = "cb_tipopersona";
             this.cb_tipopersona.Size = new System.Drawing.Size(136, 24);
-            this.cb_tipopersona.TabIndex = 32;
+            this.cb_tipopersona.TabIndex = 1;
             // 
             // label4
             // 
@@ -128,7 +129,7 @@
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(136, 27);
-            this.txt_telefono.TabIndex = 20;
+            this.txt_telefono.TabIndex = 2;
             // 
             // txt_nombre
             // 
@@ -137,13 +138,14 @@
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(159, 27);
-            this.txt_nombre.TabIndex = 19;
+            this.txt_nombre.TabIndex = 0;
             // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 185);
+            this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.btn_AgregarCliente);

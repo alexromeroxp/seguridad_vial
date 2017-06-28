@@ -47,7 +47,7 @@
             // 
             this.txt_filtrar.BackColor = System.Drawing.Color.White;
             this.txt_filtrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(531, 12);
+            this.txt_filtrar.Location = new System.Drawing.Point(793, 37);
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
             this.txt_filtrar.TabIndex = 0;
@@ -67,11 +67,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductos.Location = new System.Drawing.Point(12, 102);
+            this.dgvProductos.Location = new System.Drawing.Point(12, 71);
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(727, 355);
+            this.dgvProductos.Size = new System.Drawing.Size(993, 415);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -82,7 +82,7 @@
             this.btn_AgregarProducto.FlatAppearance.BorderSize = 3;
             this.btn_AgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarProducto.Image")));
-            this.btn_AgregarProducto.Location = new System.Drawing.Point(745, 102);
+            this.btn_AgregarProducto.Location = new System.Drawing.Point(1011, 102);
             this.btn_AgregarProducto.Name = "btn_AgregarProducto";
             this.btn_AgregarProducto.Size = new System.Drawing.Size(61, 52);
             this.btn_AgregarProducto.TabIndex = 3;
@@ -95,7 +95,7 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(745, 171);
+            this.button2.Location = new System.Drawing.Point(1011, 160);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 52);
             this.button2.TabIndex = 4;
@@ -109,7 +109,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Location = new System.Drawing.Point(53, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 31);
             this.label1.TabIndex = 5;
@@ -133,7 +133,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(712, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(974, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +146,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(548, 474);
+            this.label2.Location = new System.Drawing.Point(838, 532);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 7;
@@ -159,7 +159,7 @@
             this.lbl_tc.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tc.ForeColor = System.Drawing.Color.White;
-            this.lbl_tc.Location = new System.Drawing.Point(670, 474);
+            this.lbl_tc.Location = new System.Drawing.Point(960, 532);
             this.lbl_tc.Name = "lbl_tc";
             this.lbl_tc.Size = new System.Drawing.Size(49, 20);
             this.lbl_tc.TabIndex = 8;
@@ -171,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(818, 503);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_tc);
             this.Controls.Add(this.label2);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_filtrar);
             this.ForeColor = System.Drawing.Color.Black;
-            this.MaximumSize = new System.Drawing.Size(834, 542);
+            this.MaximumSize = new System.Drawing.Size(1100, 600);
             this.MinimumSize = new System.Drawing.Size(834, 542);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

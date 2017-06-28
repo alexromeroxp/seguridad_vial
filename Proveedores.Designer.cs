@@ -60,7 +60,7 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(751, 129);
+            this.button2.Location = new System.Drawing.Point(711, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 52);
             this.button2.TabIndex = 13;
@@ -74,7 +74,7 @@
             this.btn_AgregarProducto.FlatAppearance.BorderSize = 3;
             this.btn_AgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarProducto.Image")));
-            this.btn_AgregarProducto.Location = new System.Drawing.Point(751, 71);
+            this.btn_AgregarProducto.Location = new System.Drawing.Point(711, 71);
             this.btn_AgregarProducto.Name = "btn_AgregarProducto";
             this.btn_AgregarProducto.Size = new System.Drawing.Size(61, 52);
             this.btn_AgregarProducto.TabIndex = 12;
@@ -85,7 +85,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(718, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(678, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +96,7 @@
             // 
             this.txt_filtrar.BackColor = System.Drawing.Color.White;
             this.txt_filtrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(531, 37);
+            this.txt_filtrar.Location = new System.Drawing.Point(491, 37);
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
             this.txt_filtrar.TabIndex = 9;
@@ -133,14 +133,15 @@
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
-            this.dgvProveedores.Size = new System.Drawing.Size(727, 325);
+            this.dgvProveedores.Size = new System.Drawing.Size(693, 378);
             this.dgvProveedores.TabIndex = 18;
             // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 461);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -148,6 +149,8 @@
             this.Controls.Add(this.btn_AgregarProducto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txt_filtrar);
+            this.MaximumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Proveedores";
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);

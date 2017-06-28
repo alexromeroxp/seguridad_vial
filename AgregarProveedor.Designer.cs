@@ -61,7 +61,7 @@
             this.btn_regresar.Location = new System.Drawing.Point(27, 19);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(35, 29);
-            this.btn_regresar.TabIndex = 45;
+            this.btn_regresar.TabIndex = 5;
             this.btn_regresar.UseVisualStyleBackColor = false;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
@@ -75,21 +75,21 @@
             this.btn_AgregarProveedor.Location = new System.Drawing.Point(286, 206);
             this.btn_AgregarProveedor.Name = "btn_AgregarProveedor";
             this.btn_AgregarProveedor.Size = new System.Drawing.Size(56, 46);
-            this.btn_AgregarProveedor.TabIndex = 44;
+            this.btn_AgregarProveedor.TabIndex = 4;
             this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
             this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
             // 
             // cb_estatus
             // 
+            this.cb_estatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_estatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_estatus.FormattingEnabled = true;
             this.cb_estatus.Items.AddRange(new object[] {
-            "A",
-            "B"});
+            "A"});
             this.cb_estatus.Location = new System.Drawing.Point(207, 89);
             this.cb_estatus.Name = "cb_estatus";
             this.cb_estatus.Size = new System.Drawing.Size(136, 24);
-            this.cb_estatus.TabIndex = 43;
+            this.cb_estatus.TabIndex = 1;
             // 
             // label4
             // 
@@ -97,9 +97,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(203, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 42;
-            this.label4.Text = "estatus";
+            this.label4.Text = "Estatus";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
@@ -139,7 +139,7 @@
             this.txt_rfc.Multiline = true;
             this.txt_rfc.Name = "txt_rfc";
             this.txt_rfc.Size = new System.Drawing.Size(159, 28);
-            this.txt_rfc.TabIndex = 38;
+            this.txt_rfc.TabIndex = 2;
             // 
             // txt_telefono
             // 
@@ -148,7 +148,7 @@
             this.txt_telefono.Multiline = true;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(136, 27);
-            this.txt_telefono.TabIndex = 37;
+            this.txt_telefono.TabIndex = 3;
             // 
             // txt_nombre
             // 
@@ -157,13 +157,14 @@
             this.txt_nombre.Multiline = true;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(159, 27);
-            this.txt_nombre.TabIndex = 36;
+            this.txt_nombre.TabIndex = 0;
             // 
             // AgregarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 271);
+            this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.btn_AgregarProveedor);

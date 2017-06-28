@@ -45,6 +45,7 @@ namespace SeguridadVialInventario
         public void ListarClientes(MySqlConnection con, string Nombre)
         {
             dgvClientes.DataSource = DAOClientes.Buscar(con, Nombre);
+            dgvClientes.AutoResizeColumns();
         }
         private void txt_filtrar_KeyDown(object sender, KeyEventArgs e)
         {

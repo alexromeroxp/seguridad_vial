@@ -51,6 +51,7 @@ namespace SeguridadVialInventario
         public void ListarProductos(MySqlConnection con, string Nombre)
         {
             dgvProductos.DataSource = DAOProductos.Buscar(con,Nombre);
+            dgvProductos.AutoResizeColumns();
         }
 
         private void txt_filtrar_KeyDown(object sender, KeyEventArgs e)
@@ -155,7 +156,6 @@ namespace SeguridadVialInventario
                 mp.precio_compra = precio_compra;
                 mp.precio_venta = precio_venta;
                 mp.estatus = estatus;
-                mp.id_proveedor = id_proveedor;
                 mp.cantidad = cantidad;
                 mp.stock_minimo = stock_minimo;
                 mp.stock_maximo = stock_maximo;
