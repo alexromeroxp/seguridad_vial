@@ -84,7 +84,7 @@ namespace SeguridadVialInventario
                             Producto.nombre = txt_nombre.Text;
                             nombre_proveedor.nombre = cb_proveedor.Text;
                             DAOProveedores.Buscarid(con.con, nombre_proveedor);
-                            Producto.id_proveedor = nombre_proveedor.id;
+                            
                             Producto.precio_compra =float.Parse( txt_precio_compra.Text);
                             Producto.precio_venta = float.Parse(txt_precio_venta.Text);
                             Producto.stock_minimo = int.Parse(txt_stock_minimo.Text);
@@ -94,7 +94,7 @@ namespace SeguridadVialInventario
 
 
 
-                            int resultado = DAOProductos.Agregar(con.con, Producto);
+                            int resultado = DAOProductos.Agregar(con.con, Producto,nombre_proveedor);
 
                             if (resultado > 0)
                             {

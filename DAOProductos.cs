@@ -22,7 +22,7 @@ namespace SeguridadVialInventario
        
 
         public float totalcompra { get; set;}
-        public int id_proveedor { get; set; }
+       // public int id_proveedor { get; set; }
 
 
         public DAOProductos()
@@ -41,7 +41,7 @@ namespace SeguridadVialInventario
             this.stock_minimo = stock_minimo;
             this.totalcompra = TotalCompra;
             this.stock_minimo = stock_maximo;
-            this.id_proveedor = id_proveedor;
+           // this.id_proveedor = id_proveedor;
 
 
         }
@@ -65,7 +65,7 @@ namespace SeguridadVialInventario
                 Producto.stock_minimo = reader.GetInt32(7);
                 Producto.stock_maximo = reader.GetInt32(8);
                 Producto.totalcompra = reader.GetFloat(9);
-                Producto.id_proveedor = reader.GetInt32(10);
+               // Producto.id_proveedor = reader.GetInt32(10);
 
                 lista.Add(Producto);
             }
@@ -109,19 +109,19 @@ namespace SeguridadVialInventario
 
 
         }
-        public static int Agregar(MySqlConnection con, DAOProductos Productos)
+        public static int Agregar(MySqlConnection con, DAOProductos Productos,DAOProveedores nombre_proveedor)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO productos (id_producto,nombre,precio_compra,precio_venta,id_proveedor,cantidad,stock_minimo,stock_maximo) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Productos.id, Productos.nombre, Productos.precio_compra,Productos.precio_venta, Productos.id_proveedor,Productos.cantidad,Productos.stock_minimo,Productos.stock_maximo), con);
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO productos (id_producto,nombre,precio_compra,precio_venta,id_proveedor,cantidad,stock_minimo,stock_maximo) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", Productos.id, Productos.nombre, Productos.precio_compra,Productos.precio_venta, nombre_proveedor.id,Productos.cantidad,Productos.stock_minimo,Productos.stock_maximo), con);
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
         }
 
-        internal static int Modificar(MySqlConnection con, DAOProductos Productos)
+        internal static int Modificar(MySqlConnection con, DAOProductos Productos,DAOProveedores nombre_proveedor)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE productos SET nombre='{0}',precio_compra='{1}',precio_venta='{2}',estatus='{3}',id_proveedor='{4}',cantidad='{5}',stock_minimo='{6}',stock_maximo='{7}' where id_producto='{8}' " , Productos.nombre, Productos.precio_compra, Productos.precio_venta,Productos.estatus, Productos.id_proveedor, Productos.cantidad, Productos.stock_minimo, Productos.stock_maximo,Productos.id), con);
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE productos SET nombre='{0}',precio_compra='{1}',precio_venta='{2}',estatus='{3}',id_proveedor='{4}',cantidad='{5}',stock_minimo='{6}',stock_maximo='{7}' where id_producto='{8}' " , Productos.nombre, Productos.precio_compra, Productos.precio_venta,Productos.estatus,nombre_proveedor.id, Productos.cantidad, Productos.stock_minimo, Productos.stock_maximo,Productos.id), con);
             retorno = comando.ExecuteNonQuery();
 
 

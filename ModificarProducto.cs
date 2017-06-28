@@ -87,11 +87,11 @@ namespace SeguridadVialInventario
                         Productos.id = Convert.ToInt32(id);
                         nombre_proveedor.nombre = cb_proveedor.Text;
                         DAOProveedores.Buscarid(con.con, nombre_proveedor);
-                        Productos.id_proveedor = nombre_proveedor.id;
+                        
                         Productos.estatus = Convert.ToString(cb_estatus.Text);
 
 
-                        int resultado = DAOProductos.Modificar(con.con, Productos);
+                        int resultado = DAOProductos.Modificar(con.con, Productos,nombre_proveedor);
 
                         if (resultado > 0)
                         {
