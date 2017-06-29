@@ -91,3 +91,4 @@ C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVial
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Productos.resources
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Properties.Resources.resources
 C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.csproj.GenerateResource.Cache
+C:\Users\Fernando Baldenebro\Source\Repos\seguridad_vial\obj\Debug\SeguridadVialInventario.Alertas.resources

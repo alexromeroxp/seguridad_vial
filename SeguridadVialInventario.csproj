@@ -65,6 +65,12 @@
     <Compile Include="AgregarProveedor.Designer.cs">
       <DependentUpon>AgregarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alertas.Designer.cs">
+      <DependentUpon>Alertas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,7 @@
       <DependentUpon>Comprar.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="DAOAlertas.cs" />
     <Compile Include="DAOClientes.cs" />
     <Compile Include="DAOComprar.cs" />
     <Compile Include="DAOMovimientos.cs" />
@@ -148,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProveedor.resx">
       <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alertas.resx">
+      <DependentUpon>Alertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

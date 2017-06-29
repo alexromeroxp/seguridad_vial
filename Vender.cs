@@ -84,96 +84,103 @@ namespace SeguridadVialInventario
 
         private void btn_AgregarCliente_Click(object sender, EventArgs e)
         {
-            id_producto.Add(cb_Producto.Text);
-            id_cliente.Add(cb_cliente.Text);
-            DateTime localDate = DateTime.Now;
-            fecha_venta.Add(localDate.ToString());
-            cantidad.Add(txt_Cantidad.Text);
-            precio_vent.nombre =cb_Producto.Text;
-            try
+            if (txt_Cantidad.Text == "" || txt_Cantidad.Text == "0")
             {
-                if (con.Abrirconexion() == true)
-                {
-                   DAOProductos.BuscarPrecio(con.con, precio_vent);
-                    con.Cerrarconexion();
-
-                }
+                MessageBox.Show("Ingrese una cantidad valida!");
+                txt_Cantidad.Focus();
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            else if (txt_Total.Text == "")
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Presione enter en el campo de 'Cantidad' para ver la cantidad en almacen..");
+                txt_Cantidad.Focus();
             }
-            totall = precio_vent.precio_venta * int.Parse(txt_Cantidad.Text);
-            total.Add(totall);
-            totalll = totalll + totall;
-            dgv_vender.Rows.Add(cb_cliente.Text, cb_Producto.Text,txt_Cantidad.Text,totalll);
-            lbl_total.Text = totalll.ToString();
-            
-        }
-
-        private void btn_Vender_Click(object sender, EventArgs e)
-        {
-
-            if (MessageBox.Show("Seguro que desea realizar la venta?", "Confirmación Venta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            else if (int.Parse(txt_Cantidad.Text) > int.Parse(txt_Total.Text))
             {
-
-
-                try
+                MessageBox.Show("No hay suficiente en almacen..");
+            }
+            else
+            {
                 {
-                    if (con.Abrirconexion() == true)
+                    id_producto.Add(cb_Producto.Text);
+                    id_cliente.Add(cb_cliente.Text);
+                    DateTime localDate = DateTime.Now;
+                    fecha_venta.Add(localDate.ToString());
+                    cantidad.Add(txt_Cantidad.Text);
+                    precio_vent.nombre = cb_Producto.Text;
+                    try
                     {
-                        DAOVender Vender = new DAOVender();
-
-                        for (int i = 0; i < id_cliente.Count; i++)
+                        if (con.Abrirconexion() == true)
                         {
-                            MessageBox.Show(id_producto[i]);
-                            if (i == 1)
-                            {
-                                id_venta.id = DAOVender.Buscarid(con.con);
-                                Vender.id = id_venta.id;
-                                id_venta.id_movimiento = DAOMovimientos.Buscarid(con.con);
-                                Vender.id_movimiento = id_venta.id_movimiento;
-                               
-
-                            }
-
-
-
-                            Vender.cliente = id_cliente[i];
-                            Vender.producto = id_producto[i];
-                            Vender.cantidad = int.Parse(cantidad[i]);
-                            if (total[i] == total.Count-1)
-                            {
-                                Vender.total = totalll;
-
-                            }else
-                            {
-                                Vender.total = total[i];
-                            }
-                            Vender.fecha_venta =fecha_venta[i] ;
-                            int resultado = DAOVender.Agregar(con.con, Vender);
+                            DAOProductos.BuscarPrecio(con.con, precio_vent);
+                            con.Cerrarconexion();
 
                         }
-
-
-
-
-
-
                     }
-                   
+                    catch (MySql.Data.MySqlClient.MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    totall = precio_vent.precio_venta * int.Parse(txt_Cantidad.Text);
+                    total.Add(totall);
+                    totalll = totalll + totall;
+                    dgv_vender.Rows.Add(cb_cliente.Text, cb_Producto.Text, txt_Cantidad.Text, totalll);
+                    lbl_total.Text = totalll.ToString();
                 }
-                catch (MySql.Data.MySqlClient.MySqlException ex)
+            }
+        }
+        private void btn_Vender_Click(object sender, EventArgs e)
+        {
+            if (dgv_vender.RowCount < 2)
+            {
+                MessageBox.Show("Inserte un Producto");
+                txt_Cantidad.Focus();
+            }else
+            {
+                if (MessageBox.Show("Seguro que desea realizar la venta?", "Confirmación Venta", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    try
+                    {
+                        if (con.Abrirconexion() == true)
+                        {
+                            DAOVender Vender = new DAOVender();
 
-                    MessageBox.Show(ex.Message);
+                            for (int i = 0; i < id_cliente.Count; i++)
+                            {
+                                MessageBox.Show(id_producto[i]);
+                                if (i == 1)
+                                {
+                                    id_venta.id = DAOVender.Buscarid(con.con);
+                                    Vender.id = id_venta.id;
+                                    id_venta.id_movimiento = DAOMovimientos.Buscarid(con.con);
+                                    Vender.id_movimiento = id_venta.id_movimiento;
+                                }
+                                Vender.cliente = id_cliente[i];
+                                Vender.producto = id_producto[i];
+                                Vender.cantidad = int.Parse(cantidad[i]);
+                                if (total[i] == total.Count - 1)
+                                {
+                                    Vender.total = totalll;
+                                }
+                                else
+                                {
+                                    Vender.total = total[i];
+                                }
+                                Vender.fecha_venta = fecha_venta[i];
+                                int resultado = DAOVender.Agregar(con.con, Vender);
+                                MessageBox.Show("Venta Almacenada!");
+                                txt_Cantidad.Text = "1";
+                                txt_Total.Clear();
+                                dgv_vender.Rows.Clear();
+                            }
+                        }
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                    con.Cerrarconexion();
                 }
-
-                this.Close();
-              
-
-                Catalogos.formulario.Vender = null;
-                con.Cerrarconexion();
             }
         }
 
@@ -181,5 +188,44 @@ namespace SeguridadVialInventario
         {
 
         }
+
+        private void cb_cliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void CargarTotal()
+        {
+            try
+            {
+                if (con.Abrirconexion() == true)
+                {
+                    txt_Total.Text = DAOVender.BuscarCantidad(con.con, cb_Producto.Text).ToString();
+                    con.Cerrarconexion();
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb_Producto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txt_Cantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CargarTotal();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Catalogos.formulario.Vender = null;
+        }
     }
 }
+

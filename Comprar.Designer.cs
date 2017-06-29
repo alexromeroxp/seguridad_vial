@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comprar));
             this.cb_proveedor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_comprar = new System.Windows.Forms.Button();
@@ -40,22 +41,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_Producto = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cb_proveedor
             // 
+            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_proveedor.FormattingEnabled = true;
-            this.cb_proveedor.Location = new System.Drawing.Point(180, 67);
+            this.cb_proveedor.Location = new System.Drawing.Point(179, 103);
             this.cb_proveedor.Name = "cb_proveedor";
             this.cb_proveedor.Size = new System.Drawing.Size(140, 26);
-            this.cb_proveedor.TabIndex = 41;
+            this.cb_proveedor.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(177, 46);
+            this.label2.Location = new System.Drawing.Point(176, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 40;
@@ -67,11 +70,11 @@
             this.btn_comprar.FlatAppearance.BorderSize = 3;
             this.btn_comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_comprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_comprar.Location = new System.Drawing.Point(219, 198);
+            this.btn_comprar.Location = new System.Drawing.Point(218, 234);
             this.btn_comprar.Name = "btn_comprar";
             this.btn_comprar.Size = new System.Drawing.Size(99, 35);
-            this.btn_comprar.TabIndex = 39;
-            this.btn_comprar.Text = "Vender";
+            this.btn_comprar.TabIndex = 5;
+            this.btn_comprar.Text = "Comprar";
             this.btn_comprar.UseVisualStyleBackColor = false;
             this.btn_comprar.Click += new System.EventHandler(this.btn_comprar_Click);
             // 
@@ -81,10 +84,10 @@
             this.btn_Cancelar.FlatAppearance.BorderSize = 3;
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(112, 198);
+            this.btn_Cancelar.Location = new System.Drawing.Point(111, 234);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(99, 35);
-            this.btn_Cancelar.TabIndex = 38;
+            this.btn_Cancelar.TabIndex = 4;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
@@ -95,7 +98,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(6, 4);
+            this.label1.Location = new System.Drawing.Point(5, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 37;
@@ -107,10 +110,10 @@
             this.btn_Calcular.FlatAppearance.BorderSize = 3;
             this.btn_Calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Calcular.Location = new System.Drawing.Point(180, 117);
+            this.btn_Calcular.Location = new System.Drawing.Point(179, 153);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(140, 35);
-            this.btn_Calcular.TabIndex = 36;
+            this.btn_Calcular.TabIndex = 3;
             this.btn_Calcular.Text = "Calcular";
             this.btn_Calcular.UseVisualStyleBackColor = false;
             this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
@@ -119,7 +122,7 @@
             // 
             this.lbl_total.AutoSize = true;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(260, 167);
+            this.lbl_total.Location = new System.Drawing.Point(259, 203);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(62, 18);
             this.lbl_total.TabIndex = 33;
@@ -129,7 +132,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(203, 167);
+            this.label5.Location = new System.Drawing.Point(202, 203);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 32;
@@ -138,16 +141,17 @@
             // txt_Cantidad
             // 
             this.txt_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cantidad.Location = new System.Drawing.Point(12, 128);
+            this.txt_Cantidad.Location = new System.Drawing.Point(11, 164);
             this.txt_Cantidad.Name = "txt_Cantidad";
             this.txt_Cantidad.Size = new System.Drawing.Size(140, 24);
-            this.txt_Cantidad.TabIndex = 31;
+            this.txt_Cantidad.TabIndex = 2;
+            this.txt_Cantidad.Text = "1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 106);
+            this.label4.Location = new System.Drawing.Point(8, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 18);
             this.label4.TabIndex = 30;
@@ -157,7 +161,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 46);
+            this.label3.Location = new System.Drawing.Point(8, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 18);
             this.label3.TabIndex = 29;
@@ -165,18 +169,33 @@
             // 
             // cb_Producto
             // 
+            this.cb_Producto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Producto.FormattingEnabled = true;
-            this.cb_Producto.Location = new System.Drawing.Point(9, 68);
+            this.cb_Producto.Location = new System.Drawing.Point(8, 104);
             this.cb_Producto.Name = "cb_Producto";
             this.cb_Producto.Size = new System.Drawing.Size(140, 26);
-            this.cb_Producto.TabIndex = 28;
+            this.cb_Producto.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 29);
+            this.button1.TabIndex = 41;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Comprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 238);
+            this.ClientSize = new System.Drawing.Size(329, 281);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cb_proveedor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_comprar);
@@ -212,5 +231,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cb_Producto;
+        private System.Windows.Forms.Button button1;
     }
 }

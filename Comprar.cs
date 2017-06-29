@@ -82,49 +82,52 @@ namespace SeguridadVialInventario
 
         private void btn_comprar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Seguro que desea Agregar?", "Confirmación Agregar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (txt_Cantidad.Text == "0" || txt_Cantidad.Text == "")
             {
-
-
-                try
-                {
-                    if (con.Abrirconexion() == true)
-                    {
-
-                        DAOComprar Comprar = new DAOComprar();
-                        Comprar.proveedor = cb_proveedor.Text;
-                        Comprar.producto = cb_Producto.Text;
-                        Comprar.cantidad = int.Parse(txt_Cantidad.Text);
-                        DateTime localDate = DateTime.Now;
-                        Comprar.fecha_compra = localDate.ToString();
-                        Comprar.total = total;
-
-                        int resultado = DAOComprar.Agregar(con.con, Comprar);
-
-                        if (resultado > 0)
-                        {
-                            txt_Cantidad.Clear();
-                            lbl_total.Text="______";
-                           
-                            cb_Producto.Text = "";
-                            cb_proveedor.Text = "";
-
-
-                        }
-
-
-                    }
-                }
-                catch (MySql.Data.MySqlClient.MySqlException ex)
-                {
-
-                    MessageBox.Show(ex.Message);
-                }
-
-                this.Close();
-                Catalogos.formulario.Comprar = null;
-                con.Cerrarconexion();
+                MessageBox.Show("Ingrese una cantidad valida..");
             }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea Agregar?", "Confirmación Agregar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+
+                    try
+                    {
+                        if (con.Abrirconexion() == true)
+                        {
+
+                            DAOComprar Comprar = new DAOComprar();
+                            Comprar.proveedor = cb_proveedor.Text;
+                            Comprar.producto = cb_Producto.Text;
+                            Comprar.cantidad = int.Parse(txt_Cantidad.Text);
+                            DateTime localDate = DateTime.Now;
+                            Comprar.fecha_compra = localDate.ToString();
+                            Comprar.total = total;
+
+                            int resultado = DAOComprar.Agregar(con.con, Comprar);
+
+                            if (resultado > 0)
+                            {
+                                txt_Cantidad.Clear();
+                                lbl_total.Text = "______";
+                                MessageBox.Show("Compra Almacenada!");
+                                txt_Cantidad.Text = "1";
+                            }
+                        }
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    con.Cerrarconexion();
+                }
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Catalogos.formulario.Comprar = null;
         }
     }
 }

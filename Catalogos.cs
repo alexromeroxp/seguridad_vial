@@ -85,5 +85,11 @@ namespace SeguridadVialInventario
 
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Alertas a = new Alertas();
+            a.Show();
+        }
     }
 }

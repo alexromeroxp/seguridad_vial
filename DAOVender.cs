@@ -61,5 +61,17 @@ namespace SeguridadVialInventario
             reader.Close();
             return v;
         }
+        public static int BuscarCantidad(MySqlConnection con,string nombre)
+        {
+            int v = new int();
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT cantidad FROM productos where nombre='{0}'",nombre),con);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                v = reader.GetInt32(0);
+            }
+            reader.Close();
+            return v;
+        }
     }
 }
