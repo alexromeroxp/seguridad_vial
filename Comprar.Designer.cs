@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comprar));
-            this.cb_proveedor = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_comprar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,30 +38,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Cantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cb_Producto = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dgvComprar = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_filtrar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cb_proveedor
-            // 
-            this.cb_proveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_proveedor.FormattingEnabled = true;
-            this.cb_proveedor.Location = new System.Drawing.Point(179, 103);
-            this.cb_proveedor.Name = "cb_proveedor";
-            this.cb_proveedor.Size = new System.Drawing.Size(140, 26);
-            this.cb_proveedor.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 18);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Proveedor:";
             // 
             // btn_comprar
             // 
@@ -70,7 +53,7 @@
             this.btn_comprar.FlatAppearance.BorderSize = 3;
             this.btn_comprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_comprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_comprar.Location = new System.Drawing.Point(218, 234);
+            this.btn_comprar.Location = new System.Drawing.Point(286, 240);
             this.btn_comprar.Name = "btn_comprar";
             this.btn_comprar.Size = new System.Drawing.Size(99, 35);
             this.btn_comprar.TabIndex = 5;
@@ -84,7 +67,7 @@
             this.btn_Cancelar.FlatAppearance.BorderSize = 3;
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(111, 234);
+            this.btn_Cancelar.Location = new System.Drawing.Point(179, 240);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(99, 35);
             this.btn_Cancelar.TabIndex = 4;
@@ -110,7 +93,7 @@
             this.btn_Calcular.FlatAppearance.BorderSize = 3;
             this.btn_Calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Calcular.Location = new System.Drawing.Point(179, 153);
+            this.btn_Calcular.Location = new System.Drawing.Point(247, 159);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(140, 35);
             this.btn_Calcular.TabIndex = 3;
@@ -122,7 +105,7 @@
             // 
             this.lbl_total.AutoSize = true;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(259, 203);
+            this.lbl_total.Location = new System.Drawing.Point(327, 209);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(62, 18);
             this.lbl_total.TabIndex = 33;
@@ -132,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(202, 203);
+            this.label5.Location = new System.Drawing.Point(270, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 32;
@@ -157,26 +140,6 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Cantidad:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Producto:";
-            // 
-            // cb_Producto
-            // 
-            this.cb_Producto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Producto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Producto.FormattingEnabled = true;
-            this.cb_Producto.Location = new System.Drawing.Point(8, 104);
-            this.cb_Producto.Name = "cb_Producto";
-            this.cb_Producto.Size = new System.Drawing.Size(140, 26);
-            this.cb_Producto.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gray;
@@ -190,14 +153,55 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgvComprar
+            // 
+            this.dgvComprar.AllowUserToAddRows = false;
+            this.dgvComprar.AllowUserToDeleteRows = false;
+            this.dgvComprar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvComprar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvComprar.Location = new System.Drawing.Point(12, 78);
+            this.dgvComprar.MultiSelect = false;
+            this.dgvComprar.Name = "dgvComprar";
+            this.dgvComprar.ReadOnly = true;
+            this.dgvComprar.Size = new System.Drawing.Size(374, 61);
+            this.dgvComprar.TabIndex = 42;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(360, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txt_filtrar
+            // 
+            this.txt_filtrar.BackColor = System.Drawing.Color.White;
+            this.txt_filtrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_filtrar.Location = new System.Drawing.Point(179, 49);
+            this.txt_filtrar.Name = "txt_filtrar";
+            this.txt_filtrar.Size = new System.Drawing.Size(181, 22);
+            this.txt_filtrar.TabIndex = 43;
+            // 
             // Comprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 281);
+            this.ClientSize = new System.Drawing.Size(408, 281);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txt_filtrar);
+            this.Controls.Add(this.dgvComprar);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cb_proveedor);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_comprar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.label1);
@@ -206,21 +210,18 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_Cantidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cb_Producto);
             this.Name = "Comprar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar";
             this.Load += new System.EventHandler(this.Comprar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cb_proveedor;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_comprar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label1;
@@ -229,8 +230,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Cantidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_Producto;
         private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView dgvComprar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_filtrar;
     }
 }

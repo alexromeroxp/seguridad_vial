@@ -55,18 +55,23 @@ namespace SeguridadVialInventario
 
             return retorno;
         }
+        public static IList<DAOComprar> Buscar(MySqlConnection con, string Nombre)
+        {
 
-        //public static int Buscarid(MySqlConnection con)
-        //{
-        //    int v = new int();
-        //    MySqlCommand comando = new MySqlCommand(string.Format("SELECT MAX(id_venta) FROM bd_seguridad_vial.ventas;"), con);
-        //    MySqlDataReader reader = comando.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        v = reader.GetInt32(0);
-        //    }
-        //    reader.Close();
-        //    return v;
-        //}
+            List<DAOComprar> lista = new List<DAOComprar>();
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT productos.nombre,proveedores.nombre from productos,proveedores where productos.nombre LIKE ('%{0}%') and productos.id_proveedor=proveedores.id_proveedor", Nombre), con);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                DAOComprar  comprar = new DAOComprar();
+                comprar.producto = reader.GetString(0);
+                comprar.proveedor = reader.GetString(1);
+                
+
+                lista.Add(comprar);
+            }
+            return lista;
+        }
     }
 }

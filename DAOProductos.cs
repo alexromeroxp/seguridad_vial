@@ -15,7 +15,7 @@ namespace SeguridadVialInventario
         public float precio_venta { get; set; }
         public string estatus { get; set; }
         public string nombre_proveedor { get; set; }
-
+        List<string> proveedor   = new List<string>();
         public int cantidad { get; set; }
         public int stock_minimo { get; set; }
         public int stock_maximo { get; set; }
@@ -127,5 +127,17 @@ namespace SeguridadVialInventario
 
             return retorno;
         }
+        public static string Buscarid(MySqlConnection con, string nombre)
+        {
+            string retorno="";
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT proveedores.nombre from proveedores,productos where productos.id_proveedor=proveedores.id_proveedor and productos.nombre='{0}';", nombre), con);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                retorno = reader.GetString(0);
+            }
+            return retorno;
+        }
+            
     }
 }

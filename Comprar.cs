@@ -16,6 +16,7 @@ namespace SeguridadVialInventario
     {
         conexion con = new conexion();
         DAOProductos precio_comp = new DAOProductos();
+        DAOProveedores proveedor= new DAOProveedores();
         public float total;
 
 
@@ -32,37 +33,31 @@ namespace SeguridadVialInventario
 
         private void Comprar_Load(object sender, EventArgs e)
         {
-            if (con.Abrirconexion() == true)
+            try
             {
-                MySqlCommand cmd = new MySqlCommand("Select * from proveedores", con.con);
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-
-                cb_proveedor.ValueMember = "nombre";
-
-                cb_proveedor.DisplayMember = "nombre";
-                cb_proveedor.DataSource = dt;
-                MySqlCommand cmd1 = new MySqlCommand("Select * from productos where estatus='A'", con.con);
-                MySqlDataAdapter da1 = new MySqlDataAdapter(cmd1);
-                DataTable dt1 = new DataTable();
-                da1.Fill(dt1);
-
-
-                cb_Producto.ValueMember = "nombre";
-
-                cb_Producto.DisplayMember = "nombre";
-                cb_Producto.DataSource = dt1;
-
-
+                if (con.Abrirconexion() == true)
+                {
+                    ListarProductos(con.con, txt_filtrar.Text);
+                    con.Cerrarconexion();
+                }
             }
-            con.Cerrarconexion();
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void ListarProductos(MySqlConnection con, string Nombre)
+        {
+            dgvComprar.DataSource = DAOProductos.Buscar(con, Nombre);
+            dgvComprar.AutoResizeColumns();
         }
 
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
-            precio_comp.nombre = cb_Producto.Text;
+            Int32 selectedRowCount =
+            dgvComprar.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            precio_comp.id= int.Parse(dgvComprar.CurrentRow.Cells[0].Value.ToString());
+            precio_comp.nombre = dgvComprar.CurrentRow.Cells[1].Value.ToString();
             try
             {
                 if (con.Abrirconexion() == true)
@@ -82,7 +77,13 @@ namespace SeguridadVialInventario
 
         private void btn_comprar_Click(object sender, EventArgs e)
         {
-            if (txt_Cantidad.Text == "0" || txt_Cantidad.Text == "")
+            if (precio_comp.id != int.Parse(dgvComprar.CurrentRow.Cells[0].Value.ToString()))
+            {
+
+                MessageBox.Show("Calcule el total del nuevo producto");
+
+            }
+            else if (txt_Cantidad.Text == "0" || txt_Cantidad.Text == "")
             {
                 MessageBox.Show("Ingrese una cantidad valida..");
             }
@@ -98,8 +99,9 @@ namespace SeguridadVialInventario
                         {
 
                             DAOComprar Comprar = new DAOComprar();
-                            Comprar.proveedor = cb_proveedor.Text;
-                            Comprar.producto = cb_Producto.Text;
+                            Comprar.proveedor = dgvComprar.CurrentRow.Cells[5].Value.ToString();
+
+                            Comprar.producto = dgvComprar.CurrentRow.Cells[1].Value.ToString();
                             Comprar.cantidad = int.Parse(txt_Cantidad.Text);
                             DateTime localDate = DateTime.Now;
                             Comprar.fecha_compra = localDate.ToString();
@@ -129,5 +131,14 @@ namespace SeguridadVialInventario
             this.Close();
             Catalogos.formulario.Comprar = null;
         }
+
+        private void cb_Producto_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+
+            
+
+        }
+      
     }
 }

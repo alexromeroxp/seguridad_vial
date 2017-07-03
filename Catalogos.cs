@@ -82,6 +82,7 @@ namespace SeguridadVialInventario
             public static ModificarCliente ModificarCliente;
             public static ModificarProveedor ModificarProveedor;
             public static AgregarProveedor AgregarProveedor;
+            
 
 
         }
