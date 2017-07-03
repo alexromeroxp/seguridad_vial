@@ -60,7 +60,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(53, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 31);
@@ -76,7 +76,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(611, 126);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 52);
+            this.button2.Size = new System.Drawing.Size(73, 60);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -90,7 +90,7 @@
             this.btn_AgregarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarCliente.Image")));
             this.btn_AgregarCliente.Location = new System.Drawing.Point(611, 57);
             this.btn_AgregarCliente.Name = "btn_AgregarCliente";
-            this.btn_AgregarCliente.Size = new System.Drawing.Size(61, 52);
+            this.btn_AgregarCliente.Size = new System.Drawing.Size(73, 62);
             this.btn_AgregarCliente.TabIndex = 10;
             this.btn_AgregarCliente.UseVisualStyleBackColor = false;
             this.btn_AgregarCliente.Click += new System.EventHandler(this.btn_AgregarProducto_Click);
@@ -140,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(684, 448);
             this.ControlBox = false;
             this.Controls.Add(this.dgvClientes);

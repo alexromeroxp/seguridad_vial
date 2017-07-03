@@ -47,7 +47,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 31);
@@ -60,9 +60,9 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(711, 129);
+            this.button2.Location = new System.Drawing.Point(711, 139);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 52);
+            this.button2.Size = new System.Drawing.Size(71, 63);
             this.button2.TabIndex = 13;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -76,7 +76,7 @@
             this.btn_AgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarProducto.Image")));
             this.btn_AgregarProducto.Location = new System.Drawing.Point(711, 71);
             this.btn_AgregarProducto.Name = "btn_AgregarProducto";
-            this.btn_AgregarProducto.Size = new System.Drawing.Size(61, 52);
+            this.btn_AgregarProducto.Size = new System.Drawing.Size(71, 62);
             this.btn_AgregarProducto.TabIndex = 12;
             this.btn_AgregarProducto.UseVisualStyleBackColor = false;
             this.btn_AgregarProducto.Click += new System.EventHandler(this.btn_AgregarProducto_Click);
@@ -140,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.ControlBox = false;
             this.Controls.Add(this.dgvProveedores);

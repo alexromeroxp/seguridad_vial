@@ -45,7 +45,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(76, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(188, 24);
@@ -72,9 +74,9 @@
             this.btn_AgregarProveedor.FlatAppearance.BorderSize = 3;
             this.btn_AgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btn_AgregarProveedor.Image")));
-            this.btn_AgregarProveedor.Location = new System.Drawing.Point(286, 206);
+            this.btn_AgregarProveedor.Location = new System.Drawing.Point(271, 190);
             this.btn_AgregarProveedor.Name = "btn_AgregarProveedor";
-            this.btn_AgregarProveedor.Size = new System.Drawing.Size(56, 46);
+            this.btn_AgregarProveedor.Size = new System.Drawing.Size(71, 62);
             this.btn_AgregarProveedor.TabIndex = 4;
             this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
             this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
@@ -94,7 +96,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(203, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
@@ -105,7 +109,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(24, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 20);
@@ -115,7 +121,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(203, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
@@ -125,7 +133,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(27, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
@@ -163,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(367, 271);
             this.ControlBox = false;
             this.Controls.Add(this.label8);

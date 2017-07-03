@@ -16,7 +16,7 @@ namespace SeguridadVialInventario
     {
         conexion con = new conexion();
         DAOProductos precio_comp = new DAOProductos();
-        DAOProveedores proveedor= new DAOProveedores();
+        DAOProveedores proveedor = new DAOProveedores();
         public float total;
 
 
@@ -56,7 +56,7 @@ namespace SeguridadVialInventario
         {
             Int32 selectedRowCount =
             dgvComprar.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            precio_comp.id= int.Parse(dgvComprar.CurrentRow.Cells[0].Value.ToString());
+            precio_comp.id = int.Parse(dgvComprar.CurrentRow.Cells[0].Value.ToString());
             precio_comp.nombre = dgvComprar.CurrentRow.Cells[1].Value.ToString();
             try
             {
@@ -134,11 +134,29 @@ namespace SeguridadVialInventario
 
         private void cb_Producto_KeyDown(object sender, KeyEventArgs e)
         {
-           
 
-            
+
+
 
         }
-      
+
+        private void txt_filtrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    if (con.Abrirconexion() == true)
+                    {
+                        ListarProductos(con.con, txt_filtrar.Text);
+                        con.Cerrarconexion();
+                    }
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

@@ -43,7 +43,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(64, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(166, 24);
@@ -70,9 +72,9 @@
             this.btn_modificarcliente.FlatAppearance.BorderSize = 3;
             this.btn_modificarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificarcliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_modificarcliente.Image")));
-            this.btn_modificarcliente.Location = new System.Drawing.Point(273, 146);
+            this.btn_modificarcliente.Location = new System.Drawing.Point(250, 124);
             this.btn_modificarcliente.Name = "btn_modificarcliente";
-            this.btn_modificarcliente.Size = new System.Drawing.Size(56, 46);
+            this.btn_modificarcliente.Size = new System.Drawing.Size(73, 76);
             this.btn_modificarcliente.TabIndex = 3;
             this.btn_modificarcliente.UseVisualStyleBackColor = false;
             this.btn_modificarcliente.Click += new System.EventHandler(this.btn_modificarcliente_Click_1);
@@ -93,7 +95,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(189, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 20);
@@ -103,7 +107,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(14, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
@@ -113,7 +119,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 20);
@@ -142,7 +150,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 197);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(335, 206);
             this.ControlBox = false;
             this.Controls.Add(this.btn_modificarcliente);
             this.Controls.Add(this.cb_tipopersona);
