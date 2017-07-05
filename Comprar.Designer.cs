@@ -216,6 +216,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_Cantidad);
             this.Controls.Add(this.label4);
+            this.MaximumSize = new System.Drawing.Size(574, 398);
+            this.MinimumSize = new System.Drawing.Size(574, 398);
             this.Name = "Comprar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comprar";

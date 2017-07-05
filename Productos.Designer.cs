@@ -184,7 +184,7 @@
             this.Controls.Add(this.txt_filtrar);
             this.ForeColor = System.Drawing.Color.Black;
             this.MaximumSize = new System.Drawing.Size(1100, 600);
-            this.MinimumSize = new System.Drawing.Size(834, 542);
+            this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";

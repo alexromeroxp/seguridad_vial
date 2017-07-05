@@ -182,6 +182,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Productos);
+            this.MaximumSize = new System.Drawing.Size(500, 484);
+            this.MinimumSize = new System.Drawing.Size(500, 484);
             this.Name = "Catalogos";
             this.Text = "Catalogos";
             this.Load += new System.EventHandler(this.Catalogos_Load);

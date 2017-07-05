@@ -317,6 +317,8 @@
             this.Controls.Add(this.txt_precio_venta);
             this.Controls.Add(this.txt_precio_compra);
             this.Controls.Add(this.txt_nombre);
+            this.MaximumSize = new System.Drawing.Size(387, 428);
+            this.MinimumSize = new System.Drawing.Size(387, 428);
             this.Name = "ModificarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarProducto";

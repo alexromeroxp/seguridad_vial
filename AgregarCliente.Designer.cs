@@ -164,6 +164,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.txt_nombre);
+            this.MaximumSize = new System.Drawing.Size(350, 224);
+            this.MinimumSize = new System.Drawing.Size(350, 224);
             this.Name = "AgregarCliente";
             this.Text = "AgregarCliente";
             this.Load += new System.EventHandler(this.AgregarCliente_Load);

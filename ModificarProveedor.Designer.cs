@@ -187,6 +187,8 @@
             this.Controls.Add(this.txt_rfc);
             this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.txt_nombre);
+            this.MaximumSize = new System.Drawing.Size(385, 294);
+            this.MinimumSize = new System.Drawing.Size(385, 294);
             this.Name = "ModificarProveedor";
             this.Text = "ModificarProveedor";
             this.Load += new System.EventHandler(this.ModificarProveedor_Load);

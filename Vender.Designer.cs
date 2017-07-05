@@ -314,6 +314,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cb_Producto);
+            this.MaximumSize = new System.Drawing.Size(636, 374);
+            this.MinimumSize = new System.Drawing.Size(636, 374);
             this.Name = "Vender";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vender";

@@ -77,6 +77,8 @@
             this.Controls.Add(this.dgvAlerta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(542, 428);
+            this.MinimumSize = new System.Drawing.Size(542, 428);
             this.Name = "Alertas";
             this.Text = "Alertas";
             this.Load += new System.EventHandler(this.Alertas_Load);

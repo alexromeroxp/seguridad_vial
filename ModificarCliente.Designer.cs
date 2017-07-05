@@ -162,6 +162,8 @@
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_regresar);
+            this.MaximumSize = new System.Drawing.Size(351, 245);
+            this.MinimumSize = new System.Drawing.Size(351, 245);
             this.Name = "ModificarCliente";
             this.Text = "ModificarCliente";
             this.Load += new System.EventHandler(this.ModificarCliente_Load);

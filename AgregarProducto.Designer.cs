@@ -291,6 +291,8 @@
             this.Controls.Add(this.txt_precio_venta);
             this.Controls.Add(this.txt_precio_compra);
             this.Controls.Add(this.txt_nombre);
+            this.MaximumSize = new System.Drawing.Size(367, 368);
+            this.MinimumSize = new System.Drawing.Size(367, 368);
             this.Name = "AgregarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarProducto";
