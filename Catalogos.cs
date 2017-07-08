@@ -82,9 +82,7 @@ namespace SeguridadVialInventario
             public static ModificarCliente ModificarCliente;
             public static ModificarProveedor ModificarProveedor;
             public static AgregarProveedor AgregarProveedor;
-            
-
-
+            public static Inicio Inicio;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
